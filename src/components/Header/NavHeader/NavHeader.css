@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF
+}
+
+.NavHeader {
+    display: flex;
+    list-style: none;
+}
+
+.NavHeader li {
+    margin-right: 30px;
+}
+
+.NavHeader :last-child {
+    margin-right: 0;
+}

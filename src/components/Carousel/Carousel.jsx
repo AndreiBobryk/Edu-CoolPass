@@ -1,0 +1,43 @@
+import React, {useState, useEffect} from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import axios from 'axios';
+
+function Test() {
+    const [image, setImage] = useState([]);
+
+    const endpointsImage = "https://api2.praguecoolpass.com/pages/5fd771cc072e5479bded0f2b";
+
+
+    async function getSlides() {
+        const data = await axios.get(endpointsImage)
+        setImage(data.data.mainImage.web_image)
+        console.log('data', data.data.mainImage.web_image )   
+        
+    }
+
+    useEffect(() => {
+        getSlides();
+      }, []);
+    
+ 
+
+
+
+
+  return (
+    <Carousel showArrows={false} autoPlay={true} dynamicHeight={false} emulateTouch={true} interval="12000" showThumbs={false} showStatus={false} stopOnHover={false} infiniteLoop={true}>
+        {image.map(img => {
+            const url = 'https://static2.praguecoolpass.com/' + img;
+            return (
+                <div>
+                    <img  src={url} alt='slide-img'/>
+
+                </div>
+            )
+        })}
+    </Carousel>
+);
+}
+
+export default Test;

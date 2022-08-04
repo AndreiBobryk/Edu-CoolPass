@@ -1,0 +1,22 @@
+.Button {
+    box-sizing: border-box;
+    background: #DA4B07;
+    border-radius: 5px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 130%;
+    cursor: pointer;
+    color: #FFFFFF;
+    width: 105px;
+    height: 35px;
+    border: none;
+
+
+
+}
+
+.Button:hover {
+    background: #ef5106;
+}
