@@ -1,0 +1,60 @@
+.HeroSection {
+    position: relative;
+}
+
+.HeroSection__Content {
+    position: absolute;
+    color:white;
+    box-sizing: border-box;
+    max-width: 1280px;
+
+    height: 202px;
+    top: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 70px;
+
+}
+
+.Input {
+    box-sizing: border-box;
+    width: 270px;
+    height: 37px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 20px;
+    padding-left: 12px;
+}
+
+.Title {
+    text-align: left;
+}
+
+.Subtitle {
+    text-align: left;
+    margin-top: 8px;
+}
+
+.Search {
+    text-align: left;
+}
+
+.BottomLine {
+    height: 50px;
+    text-align: center;
+    background: #EF5106;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: #ffffff;
+    padding: auto 0;
+    padding-top: 16px;
+}

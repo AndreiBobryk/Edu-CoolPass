@@ -3,7 +3,7 @@ import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from 'axios';
 
-function Test() {
+function CarouselMain() {
     const [image, setImage] = useState([]);
 
     const endpointsImage = "https://api2.praguecoolpass.com/pages/5fd771cc072e5479bded0f2b";
@@ -26,7 +26,7 @@ function Test() {
 
 
   return (
-    <Carousel showArrows={false} autoPlay={true} dynamicHeight={false} emulateTouch={true} interval="12000" showThumbs={false} showStatus={false} stopOnHover={false} infiniteLoop={true}>
+    <Carousel showArrows={false} autoPlay={true} dynamicHeight={true} emulateTouch={true} interval="12000" showThumbs={false} showStatus={false} stopOnHover={false} infiniteLoop={true}>
         {image.map(img => {
             const url = 'https://static2.praguecoolpass.com/' + img;
             return (
@@ -40,4 +40,4 @@ function Test() {
 );
 }
 
-export default Test;
+export default CarouselMain;

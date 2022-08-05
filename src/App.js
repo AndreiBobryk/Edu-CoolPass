@@ -2,7 +2,8 @@ import "./App.css";
 
 import React from "react";
 import Header from "./components/Header/Header";
-import Test from "./components/Carousel/Carousel";
+
+import HeroSection from "./components/HeroSection/HeroSection";
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
      
 
     <Header />
-    <Test />
+    <HeroSection/>
 
 
     </div>
