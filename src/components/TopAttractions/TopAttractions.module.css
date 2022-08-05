@@ -1,0 +1,94 @@
+.Wrapper {
+    box-sizing: border-box;
+    max-width: 1280px;
+    margin: auto;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+.Card {
+    position: relative;
+}
+
+.Content {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 270px;
+    background: rgba(37, 44, 62, 0.6);
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+.Content:hover {
+
+    min-height: 100px;
+
+
+}
+
+.Content:hover .SubtitleCard {
+    display: block;
+
+}
+
+.TitleCard {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    color: #FFFFFF;
+    text-align: left;
+    margin: auto 56px auto 20px;
+
+}
+
+.SubtitleCard {
+    display: none;
+    padding-top: 5px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+.Label {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border-radius: 5px 0px 0px 5px;
+    background: #FFC513;
+    color: #252C3E;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 165%;
+    padding: 0 14px;
+    
+
+}
+
+.Icon {
+    position: absolute;
+    bottom: 18px;
+    right: 30px;
+}
+
+.NextArrow {
+    top: 20%;
+    
+} 
+
+.Title {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+}

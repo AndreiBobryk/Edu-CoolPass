@@ -46,6 +46,7 @@
 }
 
 .BottomLine {
+    box-sizing: border-box;
     height: 50px;
     text-align: center;
     background: #EF5106;
