@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 
 import HeroSection from "./components/HeroSection/HeroSection";
 import TopAttractions from "./components/TopAttractions/TopAttractions";
+import Benefits from "./components/Benefits/Benefits";
 
 function App() {
 
@@ -14,7 +15,8 @@ function App() {
 
     {/* <Header />
     <HeroSection/> */}
-    <TopAttractions/>
+    {/* <TopAttractions/> */}
+    <Benefits/>
 
 
     </div>

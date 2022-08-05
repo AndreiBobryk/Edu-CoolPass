@@ -1,0 +1,69 @@
+.Wrapper {
+    box-sizing: border-box;
+    max-width: 1280px;
+    margin: auto;
+    padding-left: 70px;
+    padding-right: 70px;
+    display: flex;
+}
+
+.Title {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+}
+
+.TitleBenefit {
+    background: #2F384F;
+    box-sizing: border-box;
+    width: 656px;
+    height: 90px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 90px;
+    color: #FFFFFF;
+    padding-left: 20px;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: left;
+    margin-top: 2px;
+
+}
+
+.TextBenefit {
+    box-sizing: border-box;
+    width: 656px;
+    text-align: left;
+    padding: 15px 20px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 165%;
+    color: #252527;
+
+}
+
+.Images {
+    width: 100%;
+    position: relative;
+    z-index: 50;
+}
+
+.Mobile {
+    position: absolute;
+    left: 67px;
+    top: 151px;
+    z-index: 1000;
+}
+
+.Card {
+    position: absolute;
+    left: 198px;
+    top: 287px;
+    z-index: 500;
+
+}
