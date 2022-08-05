@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import HeroSection from "./components/HeroSection/HeroSection";
 import TopAttractions from "./components/TopAttractions/TopAttractions";
 import Benefits from "./components/Benefits/Benefits";
+import CoolPassIncludes from "./components/CoolPassIncludes/CoolPassIncludes";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
     <HeroSection/> */}
     {/* <TopAttractions/> */}
     <Benefits/>
+    <CoolPassIncludes/>
 
 
     </div>
