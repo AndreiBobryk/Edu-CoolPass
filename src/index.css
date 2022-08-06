@@ -400,3 +400,13 @@ font-size: 22px;
 line-height: 130%;
 }
 
+h4 {
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 130%;
+color: #252C3E;
+
+}
+

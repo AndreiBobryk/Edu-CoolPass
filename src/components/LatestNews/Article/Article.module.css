@@ -1,0 +1,43 @@
+.Image {
+    width: 560px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.Wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.Description {
+    text-align: left;
+    padding-bottom: 25px;
+}
+
+.Title {
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.Description a {
+    color: rgba(37,44,62,.6);
+    text-decoration: none;
+}
+
+.Link {
+    cursor: pointer;
+    margin-top: 25px;
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-family: Open Sans,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #da4b07;
+
+}
+
+.Link:hover {
+    text-decoration: none;
+}

@@ -8,6 +8,7 @@ import TopAttractions from "./components/TopAttractions/TopAttractions";
 import Benefits from "./components/Benefits/Benefits";
 import CoolPassIncludes from "./components/CoolPassIncludes/CoolPassIncludes";
 import HowToUse from "./components/HowToUse/HowToUse";
+import LatestNews from "./components/LatestNews/LatestNews";
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
     {/* <Benefits/>
     <CoolPassIncludes/> */}
     <HowToUse/>
+    <LatestNews/>
 
 
     </div>
