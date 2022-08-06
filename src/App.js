@@ -11,6 +11,7 @@ import HowToUse from "./components/HowToUse/HowToUse";
 import LatestNews from "./components/LatestNews/LatestNews";
 import BuyCard from "./components/BuyCard/BuyCard";
 import Reviews from "./components/Reviews/Reviews";
+import Footer from "./components/Footer/Footer";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
     <LatestNews/>
     <BuyCard/>
     <Reviews/>
+    <Footer/>
 
 
     </div>

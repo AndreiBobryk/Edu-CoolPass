@@ -1,0 +1,17 @@
+.NavFooter {
+    list-style: none;
+    text-align: left;
+}
+
+.NavFooter li {
+    margin-bottom: 10px;
+}
+
+.NavFooter li:last-child {
+    margin-bottom:0;
+}
+
+.Section3 {
+    display: flex;
+    flex-direction: column;
+}

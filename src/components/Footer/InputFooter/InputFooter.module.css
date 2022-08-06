@@ -1,0 +1,52 @@
+
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.P1 {
+    color: #fff;
+    margin-bottom: 17px;
+    text-align: left;
+
+}
+.P2 {
+    color: #fff;
+    
+    text-align: left;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 12px;
+
+}
+
+.P3 {
+    font-size: 12px;
+  
+    font-weight: 400;
+    color: #F9F9FB;
+    margin-top: 51px;
+    width: 348px;
+    height: 32px;
+
+}
+
+.Wrapper input {
+    padding: 13px 88px 12px 24px;
+    border-radius: 5px 0 0 5px;
+    margin-bottom: 14px;
+    float: left;
+    display: inline;
+    width: 227px;
+    height: 48px;
+
+}
+
+
+.Wrapper input::placeholder {
+    color: rgba(37, 44, 62, 0.6);
+    line-height: 165px;
+
+}
