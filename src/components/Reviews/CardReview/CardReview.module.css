@@ -1,0 +1,55 @@
+.Wrapper {
+    position: relative;
+    width: 367px;
+    height: 255px;
+    text-align: left;
+    background: #F9F9FB;
+}
+
+.Title {
+    padding: 0 0 10px 32px;
+    font-size: 18px;
+    font-weight: 700;
+
+}
+
+.Date {
+    padding: 0 0 11px 32px;
+    font-size: 12px;
+    font-weight: 600;
+
+}
+
+.Text {
+    font-size: 12px;
+    line-height: 170%;
+    padding: 0 17px 0px 32px;
+
+
+}
+
+.Text a {
+    color: #252C3E;
+    font-size: 12px;
+}
+
+.Author {
+    position: absolute;
+    color: #252C3E;
+    opacity: 0.6;
+    font-size: 12px;
+    bottom: 21px;
+    left: 32px;
+
+
+}
+
+.Icon {
+    margin: 2px;
+}
+.Rating {
+    margin-top: 15px;
+    margin-left: 29px;
+    margin-bottom: 12px;
+
+}

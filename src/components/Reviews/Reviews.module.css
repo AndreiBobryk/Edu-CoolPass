@@ -1,0 +1,38 @@
+.Wrapper {
+    max-width: 1280px;
+    margin: auto;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+
+.Title {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+}
+
+.Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.Rating {
+    font-size: 22px;
+    font-weight: 700;
+    padding-right: 20px;
+}
+
+.Rating__Count {
+    margin-right: 22px;
+}
+
+.Icon {
+    margin: 2px;
+}
+
+.Slider {
+    margin-bottom: 20px;
+}

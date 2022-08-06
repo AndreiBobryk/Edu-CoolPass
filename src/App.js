@@ -10,6 +10,7 @@ import CoolPassIncludes from "./components/CoolPassIncludes/CoolPassIncludes";
 import HowToUse from "./components/HowToUse/HowToUse";
 import LatestNews from "./components/LatestNews/LatestNews";
 import BuyCard from "./components/BuyCard/BuyCard";
+import Reviews from "./components/Reviews/Reviews";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
     <HowToUse/>
     <LatestNews/>
     <BuyCard/>
+    <Reviews/>
 
 
     </div>
