@@ -1,0 +1,25 @@
+.Title {
+    text-align: left;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    
+}
+
+.Wrapper  {
+    box-sizing: border-box;
+    max-width: 1280px;
+    margin: auto;
+    padding-left: 70px;
+    padding-right: 70px;
+
+}
+
+.WrapperCard {
+    display: flex;
+   
+}
+
+/* .WrapperCard:last-child {
+    margin-right: 0 !important;
+    background: yellow;
+} */

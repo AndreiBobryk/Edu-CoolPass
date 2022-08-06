@@ -1,0 +1,26 @@
+.Wrapper {
+    min-height: 392px;
+    width: 270px;
+    margin-right: 20px;
+
+}
+.Wrapper:last-child {
+
+    margin-right: 0;
+
+
+}
+
+.Image {
+    width: 270px;
+    height: 250px;
+}
+
+.Index {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 130%;
+    margin-top: 14px;
+    margin-bottom: 7px;
+
+}
