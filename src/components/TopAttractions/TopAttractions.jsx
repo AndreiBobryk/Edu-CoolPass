@@ -106,7 +106,7 @@ function TopAttractions() {
   }
 
   return (
-    <div className={classes.Wrapper}>
+    <section className={classes.Wrapper}>
       <h3 className={classes.Title}>TOP PRAGUE ATTRACTIONS INCLUDED IN COOLPASS</h3>
       <Slider {...settings}>
         {attractions.map((el) => {
@@ -154,7 +154,7 @@ function TopAttractions() {
           );
         })}
       </Slider>
-    </div>
+    </section>
   );
 }
 

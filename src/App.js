@@ -9,6 +9,7 @@ import Benefits from "./components/Benefits/Benefits";
 import CoolPassIncludes from "./components/CoolPassIncludes/CoolPassIncludes";
 import HowToUse from "./components/HowToUse/HowToUse";
 import LatestNews from "./components/LatestNews/LatestNews";
+import BuyCard from "./components/BuyCard/BuyCard";
 
 function App() {
 
@@ -16,13 +17,14 @@ function App() {
     <div className="App">
      
 
-    {/* <Header />
-    <HeroSection/> */}
-    {/* <TopAttractions/> */}
-    {/* <Benefits/>
-    <CoolPassIncludes/> */}
+    <Header />
+    <HeroSection/> 
+    <TopAttractions/> 
+    <Benefits/>
+    <CoolPassIncludes/>
     <HowToUse/>
     <LatestNews/>
+    <BuyCard/>
 
 
     </div>

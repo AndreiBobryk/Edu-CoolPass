@@ -10,6 +10,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -407,6 +411,16 @@ font-weight: 700;
 font-size: 18px;
 line-height: 130%;
 color: #252C3E;
+
+}
+
+h2 {
+  font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height: 130%;
+color: #FFFFFF;
 
 }
 

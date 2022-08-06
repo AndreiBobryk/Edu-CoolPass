@@ -1,0 +1,151 @@
+.Wrapper {
+    box-sizing: border-box;
+    height: 355px;
+    width: 367px;
+    border-radius: 10px;
+
+}
+
+.Header {
+    min-height: 96px;
+    background: #252C3E;
+    border-radius: 10px 10px 0 0;
+    padding-top: 19px;
+}
+
+.Subtitle {
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 14px;
+line-height: 130%;
+color: #FFFFFF;
+
+}
+
+.Content {
+    background: #F9F9FB;
+}
+
+.AdultCalc {
+    padding: 22px 15px 15px 25px;
+}
+
+.AdultCalc__Name {
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    float: left;
+    padding: 26px 37px 5px 0;
+}
+
+.AdultCalc__Price {
+
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    float: left;
+    padding-right: 31px;
+
+}
+.AdultCalc__PriceTitle {
+    font-size: 14px;
+    font-weight: 400;
+
+}
+
+.AdultCalc__PriceSum {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+}
+
+.AdultCalc__Button,
+.AdultCalc__Count {
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+    font-weight: 700;
+    background: #FFFFFF;
+    border: none;
+}
+.AdultCalc__Count {
+
+   
+    margin-left: 2px;
+    margin-right: 2px;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 12px;
+}
+
+.ChildCalc {
+    padding: 0px 15px 17px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    float: left;
+    background: #F9F9FB;
+}
+
+.ChildCalc__Name {
+    display: inline-block;
+    width: 64px;
+
+}
+.ChildCalc__PriceSum {
+    display: inline-block;
+    padding: 16px 31px 15px 17px;
+    vertical-align: top;
+
+} 
+
+.ChildCalc__Count {
+
+   
+    margin-left: 2px;
+    margin-right: 2px;
+    min-width: 60px;
+    display: inline-block;
+    /* vertical-align: top; */
+    padding-top: 12px;
+    height: 48px;
+    font-size: 24px;
+    font-weight: 700;
+    background: #FFFFFF;
+    border: none;
+    text-align: center;
+}
+
+.PriceTotal {
+    font-size: 18px;
+    line-height: 130%;
+    font-weight: 400;
+    padding-bottom: 18px;
+
+}
+
+.PriceTotalSum {
+    font-weight: 700;
+}
+
+
+
+.Footer {
+    /* border-radius: 0px 0px 10px 10px;
+    min-height: 60px; */
+
+}
+.Button {
+font-weight: 700;
+font-size: 15px;
+text-transform: uppercase;
+color: #FFFFFF;
+background: #DA4B07;
+border-radius: 0px 0px 10px 10px;
+border: none;
+width: 100%;
+height: 60px;
+cursor: pointer;
+
+}
