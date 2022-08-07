@@ -20,15 +20,15 @@ function App() {
      
 
     <Header />
-    <HeroSection/> 
+    <HeroSection/>
     <TopAttractions/> 
-    <Benefits/>
+     {/* <Benefits/>
     <CoolPassIncludes/>
     <HowToUse/>
     <LatestNews/>
     <BuyCard/>
     <Reviews/>
-    <Footer/>
+    <Footer/> */}
 
 
     </div>

@@ -1,16 +1,43 @@
 .Header {
   background: rgba(37, 44, 62, 0.6);
-  box-sizing: border-box;
 }
 
 .Header__wrapper {
-    box-sizing: border-box;
     max-width: 1280px; 
     height: 43px;
     margin: auto;
     padding-left: 70px;
     padding-right: 70px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    min-height: 100%;
+}
+
+.Menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 90%;
+  align-content: center;
+} 
+
+@media (max-width: 1279px) {
+
+  .Header__wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  .Lang {
+    display: none;
+  }
+  
+}
+
+@media (max-width: 767px) {
+  .Header {
+    height: 56px;
+  }
+
 }

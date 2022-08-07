@@ -9,6 +9,7 @@ import Rating from "react-rating";
 import starEmpty from "../../image/Star5.png"
 import starFull from "../../image/Star1.png"
 import Button from "../Button/Button";
+import { SampleNextArrow, SamplePrevArrow } from "../Arrows/SampleArrow";
 
 
 
@@ -35,6 +36,8 @@ function Reviews () {
         slidesToShow: 3,
         slidesToScroll: 3,
         initialSlide: 0,
+        nextArrow: <SampleNextArrow/>,
+        prevArrow: <SamplePrevArrow />,
 
         responsive: [
           {

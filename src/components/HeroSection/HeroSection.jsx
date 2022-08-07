@@ -18,10 +18,9 @@ function HeroSection() {
             placeholder="Search Attractions"
             className={classes.Input}
           ></input>
-          <Button
-            text="LET'S GO"
-            style={{ width: "103px", height: "37px" }}
-          ></Button>
+
+          <button className={classes.Button}>LET'S GO</button>
+ 
         </div>
       </div>
       <div className={classes.BottomLine}>Now you have a choice! Download the new DIGITAL PRAGUE COOLPASS straight to your mobile or collect the PHYSICAL PRAGUE CARD upon arrival</div>

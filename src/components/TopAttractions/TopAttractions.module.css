@@ -81,6 +81,14 @@
     right: 30px;
 }
 
+.Icon svg {
+   fill:none;
+}
+
+.Icon svg:hover {
+   fill:white;
+}
+
 .NextArrow {
     top: 20%;
     

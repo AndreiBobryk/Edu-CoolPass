@@ -1,9 +1,11 @@
+import React, {useState} from "react";
 import "./NavHeader.css";
 
-function NavHeader () {
+function NavHeader (props) {
+
   return (
     <nav>
-      <ul className="NavHeader">
+      <ul className={props.isHidden }>
         <li><a href="/">CoolPass / PragueCard</a></li>
         <li><a href="/">Attractions & Tours</a></li>
         <li><a href="/">Getting your pass</a></li>

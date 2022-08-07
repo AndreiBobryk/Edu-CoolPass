@@ -23,7 +23,7 @@
 }
 
 .Input {
-    box-sizing: border-box;
+   
     width: 270px;
     height: 37px;
     border-radius: 5px;
@@ -58,4 +58,84 @@
     color: #ffffff;
     padding: auto 0;
     padding-top: 16px;
+}
+
+.Button {
+    box-sizing: border-box;
+    background: #DA4B07;
+    border-radius: 5px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 130%;
+    cursor: pointer;
+    color: #FFFFFF;
+    /* padding-left: 20px;
+    padding-right: 20px; */
+    padding: 10px 20px;
+
+    border: none;
+
+
+
+}
+
+.Button:hover {
+    background: #ef5106;
+}
+
+@media (max-width: 1279px) {
+    .HeroSection__Content {
+        height: 120px;
+        top: 0;
+        padding-left: 50px;
+       
+    }
+
+    .Title {
+        font-size: 32px;
+
+    }
+    
+}
+
+@media (max-width: 767px) {
+
+    .HeroSection__Content {
+  
+        padding-left: 10px;
+       
+    }
+    .Title {
+        font-size: 26px;
+    }
+
+    .Subtitle {
+        font-style: 16px;
+        display: none;
+    }
+
+    .Search {
+     
+        position: absolute;
+        bottom: -100px;
+    }
+
+    .Input {
+
+        display: block;
+        border: black 1px solid;
+        width: 300px;
+        min-width: 100%;
+       
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .Button {
+        width: 300px;
+    }
+
 }
