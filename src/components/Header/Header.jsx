@@ -1,57 +1,66 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
 import NavHeader from "./NavHeader/NavHeader";
 import classes from "./Header.module.css";
 import classesBur from "./BurgerIcon/BurgerIcon.module.css";
 import BurgerIcon from "./BurgerIcon/BurgerIcon";
+import "./Header.css";
+import MultiLanguage from "./MultiLanguage/MultiLanguage";
 
-function Header () {
-    const [isClass, setIsClass] =  useState(classesBur.Burger);
-    const [isHidden, setIsHidden] =  useState('NavHeader Hidden');
-    const cls = [classesBur.Burger];
- 
-     function toggleBurgerMenu () {
-       
-         if (isClass.split(' ').length === 1) {
-             cls.push(classesBur.Open);
-             setIsHidden('NavHeader');
-         } else {
-            setIsHidden('NavHeader Hidden');
-            
-         }
+function Header() {
+  const [isHiddenHeaderClasses, setIsHiddenClasses] = useState("Header");
+  const [isClass, setIsClass] = useState(classesBur.Burger);
+  const [isHiddenBurgerMenu, setIsHiddenBurgerMenu] = useState("NavHeader Hidden");
+  const cls = [classesBur.Burger];
 
-         
-  
-         setIsClass(cls.join(' '));
-        
- 
-     }
+  useEffect(() => {
+    let lastScrollTop = 0;
+    const handleScroll = (event) => {
+      const st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop) {
+        setIsHiddenClasses("Header Hide");
+      } else {
+        setIsHiddenClasses("Header");
+      }
+      lastScrollTop = st;
+    };
 
-    return (
-        <header className={classes.Header}>
-            <div className={classes.Header__wrapper}>
-                <BurgerIcon onClick={toggleBurgerMenu} activeClass={isClass}/>
-                <div className={classes.Menu}>
-                <Logo />
-                <NavHeader isHidden={isHidden} />
-                <div>
-                    <Button text="BUY NOW" style={{ marginRight: '11px' }}/>
-                    
-                </div>
-                <div className={classes.Lang}>
-                <Button text="EN" style={{width:'65px', height: '35px'}}/>
-                    
-                </div>
-                </div>
-            </div>
+    window.addEventListener("scroll", handleScroll);
 
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
+  function toggleBurgerMenu() {
+    if (isClass.split(" ").length === 1) {
+      cls.push(classesBur.Open);
+      setIsHiddenBurgerMenu("NavHeader");
+    } else {
+      setIsHiddenBurgerMenu("NavHeader Hidden");
+    }
 
-            
-        </header>
-    )
+    setIsClass(cls.join(" "));
+  }
 
+  return (
+    <header className={isHiddenHeaderClasses}>
+      <div className={classes.Header__wrapper}>
+        <BurgerIcon onClick={toggleBurgerMenu} activeClass={isClass} />
+        <div className={classes.Menu}>
+          <Logo />
+          <NavHeader isHidden={isHiddenBurgerMenu} />
+          <div>
+            <Button text="BUY NOW" style={{ marginRight: "11px" }} />
+          </div>
+          <div className={classes.Lang}>
+            <MultiLanguage/>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 }
 
 export default Header;

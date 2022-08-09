@@ -1,0 +1,16 @@
+.Header {
+    background: rgba(37, 44, 62, 0.6);
+    position: fixed;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+    z-index: 120;
+    top: 0;
+    min-width: 100%;
+  }
+
+  .Hide {
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
