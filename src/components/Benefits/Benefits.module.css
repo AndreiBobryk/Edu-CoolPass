@@ -1,9 +1,5 @@
 .Wrapper {
-    box-sizing: border-box;
-    max-width: 1280px;
-    margin: auto;
-    padding-left: 70px;
-    padding-right: 70px;
+
     display: flex;
 }
 
@@ -30,6 +26,7 @@
     padding-bottom: 0;
     text-align: left;
     margin-top: 2px;
+    cursor: pointer;
 
 }
 

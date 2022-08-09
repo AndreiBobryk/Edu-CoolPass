@@ -29,9 +29,7 @@ function CardReview (props) {
     const day = objDate.getDate();
     const month = libraryMonth[monthNumber+1]
     const date = month + ' ' + day + ', ' + fullYear;
-    console.log(date)
     let text = props.text;
-    console.log(text.length)
     if (text.length > 180) {
         text = text.slice(0, 180) + '... '
         text = `<p>${text}<a href="/" style={{fontWeight:"700"}}>more</a></p>`;

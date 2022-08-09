@@ -6,6 +6,7 @@ import classes from "./TopAttractions.module.css";
 import axios from "axios";
 import {SampleNextArrow, SamplePrevArrow} from "../Arrows/SampleArrow";
 import {ReactComponent as Heart} from "../../image/svg/heart.svg"
+import Layout from "../Layout/Layout";
 
 function TopAttractions() {
   const endpoint =
@@ -74,7 +75,7 @@ function TopAttractions() {
 
 
   return (
-    <section className={classes.Wrapper}>
+    <Layout>
       <h3 className={classes.Title}>TOP PRAGUE ATTRACTIONS INCLUDED IN COOLPASS</h3>
       <Slider {...settings}>
         {attractions.map((el, index) => {
@@ -114,7 +115,7 @@ function TopAttractions() {
           );
         })}
       </Slider>
-    </section>
+    </Layout>
   );
 }
 
