@@ -8,6 +8,7 @@
 
 .Card {
     position: relative;
+    width: 270px !important;
 }
 
 .Content {
@@ -61,7 +62,7 @@
 .Label {
     position: absolute;
     top: 10px;
-    right: 15px;
+    right: 0px;
     border-radius: 5px 0px 0px 5px;
     background: #FFC513;
     color: #252C3E;
@@ -99,4 +100,14 @@
     margin-top: 40px;
     margin-bottom: 30px;
 
+}
+
+@media (max-width: 767px) {
+
+    .Wrapper {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    
 }

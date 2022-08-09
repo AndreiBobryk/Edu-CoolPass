@@ -8,8 +8,8 @@
     box-sizing: border-box;
     max-width: 1280px;
 
-    height: 202px;
-    top: 30%;
+   
+    top: 278px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -17,8 +17,8 @@
    
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding-left: 70px;
+    justify-content: start;
+    padding-left: 92px;
 
 }
 
@@ -39,6 +39,7 @@
 .Subtitle {
     text-align: left;
     margin-top: 8px;
+    margin-bottom: 50px;
 }
 
 .Search {
@@ -87,8 +88,7 @@
 
 @media (max-width: 1279px) {
     .HeroSection__Content {
-        height: 120px;
-        top: 0;
+ 
         padding-left: 50px;
        
     }
@@ -105,6 +105,9 @@
     .HeroSection__Content {
   
         padding-left: 10px;
+
+        top: 74px;
+ 
        
     }
     .Title {
@@ -113,13 +116,15 @@
 
     .Subtitle {
         font-style: 16px;
-        display: none;
+        margin-top: 10px;
+        margin-bottom: 112px;
+      
     }
 
     .Search {
-     
-        position: absolute;
-        bottom: -100px;
+        margin-left: auto;
+        margin-right: auto;
+
     }
 
     .Input {
@@ -127,7 +132,7 @@
         display: block;
         border: black 1px solid;
         width: 300px;
-        min-width: 100%;
+       
        
         margin-left: 0px;
         margin-right: 0px;
@@ -138,4 +143,15 @@
         width: 300px;
     }
 
+    .BottomLine {
+        height: 38px;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .HeroSection {
+        margin-bottom: 130px;
+    }
+    
 }

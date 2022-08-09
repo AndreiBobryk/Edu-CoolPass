@@ -1,6 +1,6 @@
 import "./App.css";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./components/Header/Header";
 
 import HeroSection from "./components/HeroSection/HeroSection";
@@ -14,23 +14,22 @@ import Reviews from "./components/Reviews/Reviews";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+  useEffect(() => {
+    document.title = "CoolPass | Prague CoolPass";
+  });
 
   return (
     <div className="App">
-     
-
-    <Header />
-    <HeroSection/>
-    <TopAttractions/> 
-     {/* <Benefits/>
-    <CoolPassIncludes/>
-    <HowToUse/>
-    <LatestNews/>
-    <BuyCard/>
-    <Reviews/>
-    <Footer/> */}
-
-
+      <Header />
+      <HeroSection />
+      <TopAttractions />
+      <Benefits />
+      <CoolPassIncludes />
+      <HowToUse />
+      <LatestNews />
+      <BuyCard />
+      <Reviews />
+      <Footer />
     </div>
   );
 }

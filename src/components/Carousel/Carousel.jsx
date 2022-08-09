@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import axios from 'axios';
+import classes from './Carousel.module.css'
 
 function CarouselMain() {
     const [image, setImage] = useState([]);
@@ -31,7 +32,7 @@ function CarouselMain() {
             const url = 'https://static2.praguecoolpass.com/' + img;
             return (
                 <div>
-                    <img  src={url} alt='slide-img'/>
+                    <img  src={url} alt='slide-img' className={classes.Img}/>
 
                 </div>
             )

@@ -19,7 +19,10 @@ function TopAttractions() {
 
   const settings = {
     dots: false,
-    infinite: false,
+    // centerPadding: '20px',
+    // centerMode: true,
+    // infinite: true,
+    // variableWidth: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -41,7 +44,7 @@ function TopAttractions() {
         settings: {
           slidesToShow: 2.5,
           slidesToScroll: 2,
-          initialSlide: 2,
+         
         },
       },
       {
@@ -57,6 +60,8 @@ function TopAttractions() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          nextArrow: null,
+          prevArrow: null,
         },
       },
     ],
@@ -64,12 +69,8 @@ function TopAttractions() {
 
   async function getTopAttractions() {
     const data = await axios.get(endpoint);
-    console.log(data, data.data);
     setAttractions(data.data);
   }
-
-
-
 
 
   return (
@@ -80,17 +81,18 @@ function TopAttractions() {
           const url = "https://static2.praguecoolpass.com/" + el.images[0];
           const title = el.content.en.title;
           const subTitle = el.content.en.subtitle;
-          console.log('subtitle', subTitle)
           return (
-            <div className={classes.Card} key={index}>
-              <a href="">
+            <div className={classes.Card} key={index} style={{width:'auto'}}>
+              <a href="/">
               <img
                 src={url}
                 alt="attraction"
                 style={{
-                  width: "270px",
+                  maxWidth: "270px",
                   height: "204px",
                   borderRadius: "10px",
+                  // marginRight: "10px"
+                  // // margin: "0 10px",
                 }}
               />
               <div className={classes.Content}>

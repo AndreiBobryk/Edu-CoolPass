@@ -1,0 +1,10 @@
+
+.Img {
+    min-height: 507px;
+}
+
+@media (max-width: 550px) {
+    .Img {
+        min-height: 244px;
+    }  
+}
