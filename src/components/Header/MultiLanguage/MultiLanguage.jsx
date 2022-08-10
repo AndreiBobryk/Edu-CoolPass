@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import Button from "../../Button/Button";
 import classes from "./MultiLanguage.module.css";
 // import OutsideClick from "./OutsideClick/OutsideAlerter";
+import {ReactComponent as ArrowDown} from "../../../image/svg/arrowDown.svg"
 
 const objLanguages = {
   'English': 'EN',
@@ -67,7 +68,7 @@ function MultiLanguage() {
 
   return (
     <div className={classes.Wrapper}>
-      <Button text={currentLanguage} style={{background: '#252C3E'}} onClick={handleClickButton} />
+      <button className={classes.Button} style={{background: '#252C3E'}} onClick={handleClickButton}  >{currentLanguage} <ArrowDown className={classes.Arrow}/></button>
       { isOpenListLanguage ? 
       (<OutsideClick setState={setIsOpenListLanguage}>
       <div className={classes.List}>

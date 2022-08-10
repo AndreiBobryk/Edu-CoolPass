@@ -1,6 +1,7 @@
 
 .Img {
-    min-height: 507px;
+    min-height: 550px;
+   
 }
 
 @media (max-width: 550px) {

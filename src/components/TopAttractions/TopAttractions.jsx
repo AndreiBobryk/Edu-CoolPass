@@ -36,6 +36,7 @@ function TopAttractions() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
+          dots: true,
         
          
         },
@@ -45,6 +46,7 @@ function TopAttractions() {
         settings: {
           slidesToShow: 2.5,
           slidesToScroll: 2,
+          dots: true,
          
         },
       },
@@ -53,6 +55,7 @@ function TopAttractions() {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          dots: true,
          
         },
       },
@@ -63,6 +66,7 @@ function TopAttractions() {
           slidesToScroll: 1,
           nextArrow: null,
           prevArrow: null,
+          dots: false,
         },
       },
     ],
@@ -92,8 +96,6 @@ function TopAttractions() {
                   maxWidth: "270px",
                   height: "204px",
                   borderRadius: "10px",
-                  // marginRight: "10px"
-                  // // margin: "0 10px",
                 }}
               />
               <div className={classes.Content}>

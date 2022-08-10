@@ -21,9 +21,9 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <HeroSection />
+      <HeroSection /> 
       <TopAttractions />
-      <Benefits />
+      <Benefits /> 
       <CoolPassIncludes />
       <HowToUse />
       <LatestNews />

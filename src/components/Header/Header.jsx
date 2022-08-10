@@ -7,6 +7,7 @@ import classesBur from "./BurgerIcon/BurgerIcon.module.css";
 import BurgerIcon from "./BurgerIcon/BurgerIcon";
 import "./Header.css";
 import MultiLanguage from "./MultiLanguage/MultiLanguage";
+import Alert from "../Alert/Alert";
 
 function Header() {
   const [isHiddenHeaderClasses, setIsHiddenClasses] = useState("Header");
@@ -44,6 +45,11 @@ function Header() {
     setIsClass(cls.join(" "));
   }
 
+  function handleClickButton () {
+    console.log('work')
+    Alert();
+  }
+
   return (
     <header className={isHiddenHeaderClasses}>
       <div className={classes.Header__wrapper}>
@@ -52,11 +58,15 @@ function Header() {
           <Logo />
           <NavHeader isHidden={isHiddenBurgerMenu} />
           <div>
-            <Button text="BUY NOW" style={{ marginRight: "11px" }} />
+            <Button text="BUY NOW" style={{ marginRight: "11px", height:'35px', padding: '0 20px', lineHeight: '35px',
+    fontWeight: '700',
+    fontSize: '15px'}}
+    onClick={handleClickButton}
+    />
           </div>
-          <div className={classes.Lang}>
+       
             <MultiLanguage/>
-          </div>
+         
         </div>
       </div>
     </header>
