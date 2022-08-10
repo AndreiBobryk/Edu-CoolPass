@@ -25,12 +25,12 @@ function CarouselMain() {
 
 
   return (
-    <Carousel showArrows={false} width='inh' autoPlay={true} dynamicHeight={false} emulateTouch={true} interval="12000" showThumbs={false} showStatus={false} stopOnHover={false} infiniteLoop={true}>
+    <Carousel showArrows={false}  autoPlay={true} dynamicHeight={false} emulateTouch={true} interval="12000" showThumbs={false} showStatus={false} stopOnHover={false} infiniteLoop={true}>
         {image.map(img => {
             const url = 'https://static2.praguecoolpass.com/' + img;
             return (
                 <div>
-                    <img  src={url} alt='slide-img' className={classes.Img} style={{maxHeight:'550px', width: 'auto'}}/>
+                    <img  src={url} alt='slide-img' className={classes.Img}   />
 
                 </div>
             )

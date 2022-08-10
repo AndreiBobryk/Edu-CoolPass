@@ -7,19 +7,20 @@
     color:white;
     box-sizing: border-box;
     max-width: 1280px;
-
-   
     top: 278px;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
-   
+    margin: auto;  
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     padding-left: 92px;
 
+}
+
+.WrapInput {
+    position: relative;
 }
 
 .Input {
@@ -29,7 +30,14 @@
     border-radius: 5px;
     border: none;
     margin-right: 20px;
-    padding-left: 12px;
+    padding: 0 30px 0 12px;
+
+}
+
+.Icon {
+    position: absolute;
+    right: 25px;
+    top: 0;
 }
 
 .Title {
@@ -57,8 +65,8 @@
     font-size: 14px;
     line-height: 130%;
     color: #ffffff;
-    padding: auto 0;
-    padding-top: 16px;
+    padding: 16px 0 0 10px;
+    overflow-x: hidden;
 }
 
 .Button {
@@ -72,10 +80,7 @@
     line-height: 130%;
     cursor: pointer;
     color: #FFFFFF;
-    /* padding-left: 20px;
-    padding-right: 20px; */
     padding: 10px 20px;
-
     border: none;
 
 
@@ -90,7 +95,7 @@
     .HeroSection__Content {
  
         padding-left: 50px;
-       
+        top: 150px;
     }
 
     .Title {
@@ -104,20 +109,22 @@
 
     .HeroSection__Content {
   
-        padding-left: 10px;
+        padding-left: 0px;
 
-        top: 74px;
+        top: 64px;
  
        
     }
     .Title {
         font-size: 26px;
+        padding-left: 10px;
     }
 
     .Subtitle {
         font-style: 16px;
-        margin-top: 10px;
-        margin-bottom: 112px;
+        padding-top: 0px;
+        padding-left: 10px;
+        margin-bottom: 67px;
       
     }
 
@@ -125,6 +132,10 @@
         margin-left: auto;
         margin-right: auto;
 
+    }
+
+    .WrapInput {
+       display: block;
     }
 
     .Input {
@@ -139,19 +150,25 @@
         margin-bottom: 10px;
     }
 
+    .Icon {
+        right: 5px;
+        top: calc(50% - 10px);
+    }
+
     .Button {
         width: 300px;
     }
 
     .BottomLine {
         height: 38px;
+        padding: 10px 0 0 10px;
     }
 
 }
 
 @media (max-width: 550px) {
     .HeroSection {
-        margin-bottom: 130px;
+        margin-bottom: 100px;
     }
     
 }

@@ -1,6 +1,8 @@
-import Button from "../Button/Button";
+
 import CarouselMain from "../Carousel/Carousel";
 import classes from "./HeruSection.module.css";
+import {ReactComponent as IconSearch} from "../../image/svg/iconSearch.svg"
+import Alert from "../Alert/Alert";
 
 function HeroSection() {
   return (
@@ -14,16 +16,22 @@ function HeroSection() {
         </h3>
         </div>
         <div className={classes.Search}>
+          <span className={classes.WrapInput}>
           <input
             placeholder="Search Attractions"
             className={classes.Input}
-          ></input>
+            
+          >
+      
+          </input>
+            <IconSearch className={classes.Icon}/>
+          </span>
 
-          <button className={classes.Button}>LET'S GO</button>
+          <button className={classes.Button} onClick={Alert}>LET'S GO</button>
  
         </div>
       </div>
-      <div className={classes.BottomLine}>Now you have a choice! Download the new DIGITAL PRAGUE COOLPASS straight to your mobile or collect the PHYSICAL PRAGUE CARD upon arrival</div>
+      <div className={classes.BottomLine}><nobr>Now you have a choice! Download the new DIGITAL PRAGUE COOLPASS straight to your mobile or collect the PHYSICAL PRAGUE CARD upon arrival</nobr></div>
     </section>
   );
 }
