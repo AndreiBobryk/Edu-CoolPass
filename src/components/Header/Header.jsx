@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Button from "../Button/Button";
 import Logo from "../Logo/Logo";
 import NavHeader from "./NavHeader/NavHeader";
 import classes from "./Header.module.css";
@@ -8,11 +7,13 @@ import BurgerIcon from "./BurgerIcon/BurgerIcon";
 import "./Header.css";
 import MultiLanguage from "./MultiLanguage/MultiLanguage";
 import Alert from "../Alert/Alert";
+import Button from "../Button/Button";
 
 function Header() {
   const [isHiddenHeaderClasses, setIsHiddenClasses] = useState("Header");
   const [isClass, setIsClass] = useState(classesBur.Burger);
-  const [isHiddenBurgerMenu, setIsHiddenBurgerMenu] = useState("NavHeader Hidden");
+  const [isHiddenBurgerMenu, setIsHiddenBurgerMenu] =
+    useState("NavHeader Hidden");
   const cls = [classesBur.Burger];
 
   useEffect(() => {
@@ -45,28 +46,33 @@ function Header() {
     setIsClass(cls.join(" "));
   }
 
-  function handleClickButton () {
-    console.log('work')
+  function handleClickButton() {
     Alert();
   }
 
   return (
     <header className={isHiddenHeaderClasses}>
-      <div className={classes.Header__wrapper}>
+      <div className={classes.Wrapper}>
         <BurgerIcon onClick={toggleBurgerMenu} activeClass={isClass} />
         <div className={classes.Menu}>
           <Logo />
           <NavHeader isHidden={isHiddenBurgerMenu} />
           <div>
-            <Button text="BUY NOW" style={{ marginRight: "11px", height:'35px', padding: '0 20px', lineHeight: '35px',
-    fontWeight: '700',
-    fontSize: '15px'}}
-    onClick={handleClickButton}
-    />
+            <Button
+              text="BUY NOW"
+              style={{
+                marginRight: "11px",
+                height: "35px",
+                padding: "0 20px",
+                lineHeight: "35px",
+                fontWeight: "700",
+                fontSize: "15px",
+              }}
+              onClick={handleClickButton}
+            />
           </div>
-       
-            <MultiLanguage/>
-         
+
+          <MultiLanguage />
         </div>
       </div>
     </header>

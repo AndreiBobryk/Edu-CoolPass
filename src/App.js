@@ -22,14 +22,14 @@ function App() {
     <div className="App">
       <Header />
       <HeroSection /> 
-      <TopAttractions />
+      {/* <TopAttractions />
       <Benefits /> 
       <CoolPassIncludes />
       <HowToUse />
       <LatestNews />
       <BuyCard />
       <Reviews />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

@@ -4,6 +4,7 @@ import "./NavHeader.css";
 function NavHeader (props) {
 
   return (
+   
     <nav>
       <ul className={props.isHidden }>
         <li><a href="/">CoolPass / PragueCard</a></li>
@@ -12,8 +13,13 @@ function NavHeader (props) {
         <li><a href="/">Plan your trip</a></li>
         <li><a href="/">Current news</a></li>
         <li><a href="/">FAQ</a></li>
+        <li><button className='Btn'>BUY NOW</button></li>
       </ul>
     </nav>
+   
+
+              
+            
     
   );
 }

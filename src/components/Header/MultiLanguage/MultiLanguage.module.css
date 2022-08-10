@@ -52,3 +52,10 @@ cursor: pointer;
 .List ul li:last-child {
     padding: 0;
 }
+
+@media (max-width: 767px) {
+    
+    .Wrapper {
+        display: none;
+    }
+}
