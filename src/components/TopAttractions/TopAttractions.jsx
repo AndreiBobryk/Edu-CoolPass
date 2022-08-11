@@ -7,6 +7,7 @@ import axios from "axios";
 import {SampleNextArrow, SamplePrevArrow} from "../Arrows/SampleArrow";
 import {ReactComponent as Heart} from "../../image/svg/heart.svg"
 import Layout from "../Layout/Layout";
+import Alert from "../Alert/Alert";
 
 function TopAttractions() {
   const endpoint =
@@ -20,10 +21,6 @@ function TopAttractions() {
 
   const settings = {
     dots: false,
-    // centerPadding: '20px',
-    // centerMode: true,
-    // infinite: true,
-    // variableWidth: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -88,7 +85,7 @@ function TopAttractions() {
           const subTitle = el.content.en.subtitle;
           return (
             <div className={classes.Card} key={index} style={{width:'auto'}}>
-              <a href="/">
+              <a href="/" onClick={Alert}>
               <img
                 src={url}
                 alt="attraction"

@@ -1,21 +1,25 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Button from "../../Button/Button";
 import classes from "./MultiLanguage.module.css";
 // import OutsideClick from "./OutsideClick/OutsideAlerter";
-import {ReactComponent as ArrowDown} from "../../../image/svg/arrowDown.svg"
+import {ReactComponent as ArrowDown} from "../../../image/svg/arrowDown.svg";
+import { setLanguage } from "../../../redux/reducer";
+import { getTranslate } from "../../../redux/actions/translate";
 
 const objLanguages = {
-  'English': 'EN',
-  'Čeština': 'CS',
-  'Deutsch': 'DE',
-  'Espanol': 'ES',
-  'Italiano': 'IT',
-  'Francais': 'FR',
-  'Русский': 'RU',
+  'English': 'en',
+  'Čeština': 'cs',
+  'Deutsch': 'de',
+  'Espanol': 'es',
+  'Italiano': 'it',
+  'Francais': 'fr',
+  'Русский': 'ru',
 
 }
 
 function MultiLanguage() {
+  const dispatch = useDispatch();
   const initLanguage = objLanguages['English'];
   const [isOpenListLanguage, setIsOpenListLanguage] = useState(false);
   const [currentLanguage, setCurrentLanguage] = useState(initLanguage);
@@ -80,6 +84,8 @@ function MultiLanguage() {
                 const newLanguage = e.target.innerText;
                 setCurrentLanguage(objLanguages[newLanguage]);
                 setIsOpenListLanguage(false);
+                dispatch(getTranslate(objLanguages[newLanguage]))
+
 
               }}
 

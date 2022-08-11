@@ -8,8 +8,12 @@ import "./Header.css";
 import MultiLanguage from "./MultiLanguage/MultiLanguage";
 import Alert from "../Alert/Alert";
 import Button from "../Button/Button";
+import { useDispatch } from "react-redux";
+import { setCount } from "../../redux/reducer";
 
-function Header() {
+
+function Header(props) {
+  const dispatch =useDispatch()
   const [isHiddenHeaderClasses, setIsHiddenClasses] = useState("Header");
   const [isClass, setIsClass] = useState(classesBur.Burger);
   const [isHiddenBurgerMenu, setIsHiddenBurgerMenu] =
@@ -46,8 +50,10 @@ function Header() {
     setIsClass(cls.join(" "));
   }
 
+
   function handleClickButton() {
     Alert();
+    dispatch(setCount(1))
   }
 
   return (

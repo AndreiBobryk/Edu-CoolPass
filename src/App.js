@@ -1,6 +1,7 @@
 import "./App.css";
 
 import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Header from "./components/Header/Header";
 
 import HeroSection from "./components/HeroSection/HeroSection";
@@ -12,18 +13,27 @@ import LatestNews from "./components/LatestNews/LatestNews";
 import BuyCard from "./components/BuyCard/BuyCard";
 import Reviews from "./components/Reviews/Reviews";
 import Footer from "./components/Footer/Footer";
+import { getTranslate } from "./redux/actions/translate";
 
 function App() {
   useEffect(() => {
     document.title = "CoolPass | Prague CoolPass";
   });
+  const language = useSelector(state => state.translation.language)
+  const dispatch = useDispatch();
+  useEffect(()=>{
+    dispatch(getTranslate())
+  }, [])
+
+  console.log('language', language)
+  
 
   return (
     <div className="App">
-      <Header />
+      <Header  />
       <HeroSection /> 
-      {/* <TopAttractions />
-      <Benefits /> 
+      <TopAttractions />
+      {/* <Benefits /> 
       <CoolPassIncludes />
       <HowToUse />
       <LatestNews />

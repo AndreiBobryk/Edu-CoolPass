@@ -3,8 +3,11 @@ import CarouselMain from "../Carousel/Carousel";
 import classes from "./HeruSection.module.css";
 import {ReactComponent as IconSearch} from "../../image/svg/iconSearch.svg"
 import Alert from "../Alert/Alert";
+import { useSelector } from "react-redux";
 
 function HeroSection() {
+  const lang = useSelector(state => state.translation.language)
+  console.log('lang', lang)
   return (
     <section className={classes.HeroSection}>
       <CarouselMain />
@@ -18,7 +21,7 @@ function HeroSection() {
         <div className={classes.Search}>
           <span className={classes.WrapInput}>
           <input
-            placeholder="Search Attractions"
+            placeholder=''/* {props.language.SEARCH} */
             className={classes.Input}
             
           >
