@@ -6,8 +6,10 @@ import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import Card from "./Card/Card";
 import axios from "axios";
 import Layout from "../Layout/Layout";
+import {  useSelector } from "react-redux";
 
 function BuyCard() {
+  const contentInterface = useSelector(state => state.translation.language);
   const endpoint =
     "https://api2.praguecoolpass.com/cardCategories?eshopId=77a85a2a-6b84-4d79-b856-dfafc14340a0";
   const [cards, setCards] = useState([]);
@@ -59,7 +61,7 @@ function BuyCard() {
 
   return (
     <Layout>
-      <h3 className={classes.Title}>BUY PRAGUE COOLPASS / CARD</h3>
+      <h3 className={classes.Title}>{contentInterface.BUY_COOLPASS_PRAGUE_CARD}</h3>
       <Slider {...settings}>
         {cards.map((card, index) => {
           const name = card.name.default;

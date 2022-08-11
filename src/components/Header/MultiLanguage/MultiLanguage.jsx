@@ -4,8 +4,10 @@ import Button from "../../Button/Button";
 import classes from "./MultiLanguage.module.css";
 // import OutsideClick from "./OutsideClick/OutsideAlerter";
 import {ReactComponent as ArrowDown} from "../../../image/svg/arrowDown.svg";
-import { setLanguage } from "../../../redux/reducer";
+import { setCurrentLanguageGlobal, setLanguage } from "../../../redux/reducer";
 import { getTranslate } from "../../../redux/actions/translate";
+import { getContentMainSection } from "../../../redux/actions/getContentMainSection";
+import { getContentBenefitSection } from "../../../redux/actions/getContentBenefitSection";
 
 const objLanguages = {
   'English': 'en',
@@ -82,9 +84,17 @@ function MultiLanguage() {
               key={key}
               onClick={(e)=>{
                 const newLanguage = e.target.innerText;
-                setCurrentLanguage(objLanguages[newLanguage]);
                 setIsOpenListLanguage(false);
-                dispatch(getTranslate(objLanguages[newLanguage]))
+
+                if (newLanguage) {
+                  const value = objLanguages[newLanguage];
+                  setCurrentLanguage(value);
+                  dispatch(getTranslate(value))
+                  dispatch(getContentMainSection(value))
+                  dispatch(getContentBenefitSection(value))
+                  dispatch(setCurrentLanguageGlobal(value))
+
+                }
 
 
               }}

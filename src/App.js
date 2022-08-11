@@ -14,6 +14,9 @@ import BuyCard from "./components/BuyCard/BuyCard";
 import Reviews from "./components/Reviews/Reviews";
 import Footer from "./components/Footer/Footer";
 import { getTranslate } from "./redux/actions/translate";
+import { getContentMainSection } from "./redux/actions/getContentMainSection";
+import { getContentTopAttractionsSection } from "./redux/actions/getContentTopAttractionsSection";
+import { getContentBenefitSection } from "./redux/actions/getContentBenefitSection";
 
 function App() {
   useEffect(() => {
@@ -23,6 +26,9 @@ function App() {
   const dispatch = useDispatch();
   useEffect(()=>{
     dispatch(getTranslate())
+    dispatch(getContentMainSection())
+    dispatch(getContentTopAttractionsSection())
+    dispatch(getContentBenefitSection())
   }, [])
 
   console.log('language', language)
@@ -33,13 +39,13 @@ function App() {
       <Header  />
       <HeroSection /> 
       <TopAttractions />
-      {/* <Benefits /> 
+      <Benefits /> 
       <CoolPassIncludes />
       <HowToUse />
       <LatestNews />
       <BuyCard />
       <Reviews />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }

@@ -3,8 +3,10 @@ import React, { useState, useEffect } from "react";
 import Layout from "../Layout/Layout";
 import CardStep from "./CardStep/CardStep";
 import classes from "./HowToUse.module.css";
+import {  useSelector } from "react-redux";
 
 function HowToUse() {
+  const contentInterface = useSelector(state => state.translation.language);
   const endpoint =
     "https://api2.praguecoolpass.com/pages/5fd771cc072e5479bded0f2b";
   const [contentStepsImages, setContentStepsImages] = useState([]);
@@ -23,7 +25,7 @@ function HowToUse() {
   return (
     <Layout>
       <h3 className={classes.Title}>
-        HOW TO USE PRAGUE COOLPASS — FEW EASY STEPS
+        {contentInterface.HOME_offers_title}
       </h3>
       <div className={classes.WrapperCard}>
         {contentStepsImages.map((image, index) => {

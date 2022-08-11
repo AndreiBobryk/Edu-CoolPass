@@ -8,12 +8,14 @@ import "./Header.css";
 import MultiLanguage from "./MultiLanguage/MultiLanguage";
 import Alert from "../Alert/Alert";
 import Button from "../Button/Button";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setCount } from "../../redux/reducer";
 
 
 function Header(props) {
   const dispatch =useDispatch()
+  const contentInterface = useSelector(state => state.translation.language)
+
   const [isHiddenHeaderClasses, setIsHiddenClasses] = useState("Header");
   const [isClass, setIsClass] = useState(classesBur.Burger);
   const [isHiddenBurgerMenu, setIsHiddenBurgerMenu] =
@@ -65,7 +67,7 @@ function Header(props) {
           <NavHeader isHidden={isHiddenBurgerMenu} />
           <div>
             <Button
-              text="BUY NOW"
+              text={contentInterface.BUY_NOW}
               style={{
                 marginRight: "11px",
                 height: "35px",

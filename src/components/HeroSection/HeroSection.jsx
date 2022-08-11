@@ -6,22 +6,23 @@ import Alert from "../Alert/Alert";
 import { useSelector } from "react-redux";
 
 function HeroSection() {
-  const lang = useSelector(state => state.translation.language)
-  console.log('lang', lang)
+  const contentInterface = useSelector(state => state.translation.language)
+  const contentMainSection = useSelector(state => state.translation.mainSection)
+  console.log('contentMainSection', contentMainSection)
   return (
     <section className={classes.HeroSection}>
       <CarouselMain />
       <div className={classes.HeroSection__Content}>
         <div>
-        <h1 className={classes.Title}>PRAGUE CARD IS NOW "COOLPASS"</h1>
+        <h1 className={classes.Title}>{contentMainSection.title}</h1>
         <h3 className={classes.Subtitle}>
-          Visit the best city attractions included in Prague CoolPass
+        {contentMainSection.subtitle}
         </h3>
         </div>
         <div className={classes.Search}>
           <span className={classes.WrapInput}>
           <input
-            placeholder=''/* {props.language.SEARCH} */
+            placeholder={contentInterface.SEARCH}
             className={classes.Input}
             
           >
@@ -30,11 +31,11 @@ function HeroSection() {
             <IconSearch className={classes.Icon}/>
           </span>
 
-          <button className={classes.Button} onClick={Alert}>LET'S GO</button>
+          <button className={classes.Button} onClick={Alert}>{contentInterface.APP_LETS_GO}</button>
  
         </div>
       </div>
-      <div className={classes.BottomLine}><nobr>Now you have a choice! Download the new DIGITAL PRAGUE COOLPASS straight to your mobile or collect the PHYSICAL PRAGUE CARD upon arrival</nobr></div>
+      <div className={classes.BottomLine}><nobr>{contentMainSection.header_banner}</nobr></div>
     </section>
   );
 }

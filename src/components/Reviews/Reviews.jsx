@@ -11,8 +11,10 @@ import starFull from "../../image/Star1.png";
 import Button from "../Button/Button";
 import { SampleNextArrow, SamplePrevArrow } from "../Arrows/SampleArrow";
 import Layout from "../Layout/Layout";
+import {  useSelector } from "react-redux";
 
 function Reviews() {
+  const contentInterface = useSelector(state => state.translation.language);
   const endpoint = "https://api2.praguecoolpass.com/review/approved";
   const [reviews, setReviews] = useState([]);
 
@@ -67,7 +69,7 @@ function Reviews() {
     <Layout>
       <div className={classes.Header}>
         <h3 className={classes.Title}>
-          WHAT OUR CUSTOMERS SAY ABOUT COOLPASS /PRAGUE CARD
+          {contentInterface.REVIEWS_what_do_customers_say}
         </h3>
 
         <div className={classes.Rating}>
@@ -103,7 +105,7 @@ function Reviews() {
       </Slider>
       <div style={{ float: "right" }}>
         <Button
-          text="SEE ALL REVIEWS"
+          text={contentInterface.REVIEWS_see_all}
           style={{
             background: "white",
             color: "black",
@@ -113,7 +115,7 @@ function Reviews() {
           }}
         />
         <Button
-          text="WRITE YOUR OPINION"
+          text={contentInterface.REVIEWS_write_your_opinion}
           style={{
             background: "white",
             color: "black",

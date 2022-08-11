@@ -8,16 +8,17 @@ import {SampleNextArrow, SamplePrevArrow} from "../Arrows/SampleArrow";
 import {ReactComponent as Heart} from "../../image/svg/heart.svg"
 import Layout from "../Layout/Layout";
 import Alert from "../Alert/Alert";
+import { useSelector } from "react-redux";
 
 function TopAttractions() {
-  const endpoint =
-    "https://api2.praguecoolpass.com/object/attraction/top-attractions";
+  const contentInterface = useSelector(state => state.translation.language);
+  const {ATTRACTIONS_label_included, ATTRACTIONS_label_with_pass, HOME_top_attractions_title} = contentInterface;
+  const contentTopAttractionSection = useSelector(state => state.translation.topAttractions)
+  const curLang = useSelector(state => state.translation.currentLanguage)
 
-  const [attractions, setAttractions] = useState([]);
 
-  useEffect(() => {
-    getTopAttractions();
-  }, []);
+
+
 
   const settings = {
     dots: false,
@@ -69,20 +70,18 @@ function TopAttractions() {
     ],
   };
 
-  async function getTopAttractions() {
-    const data = await axios.get(endpoint);
-    setAttractions(data.data);
-  }
+
 
 
   return (
     <Layout>
-      <h3 className={classes.Title}>TOP PRAGUE ATTRACTIONS INCLUDED IN COOLPASS</h3>
+      <h3 className={classes.Title}>{HOME_top_attractions_title}</h3>
       <Slider {...settings}>
-        {attractions.map((el, index) => {
+        {contentTopAttractionSection.map((el, index) => {
           const url = "https://static2.praguecoolpass.com/" + el.images[0];
-          const title = el.content.en.title;
-          const subTitle = el.content.en.subtitle;
+          
+          const title = el.content[curLang].title;
+          const subTitle = el.content[curLang].subtitle;
           return (
             <div className={classes.Card} key={index} style={{width:'auto'}}>
               <a href="/" onClick={Alert}>
@@ -102,7 +101,7 @@ function TopAttractions() {
                   <span className={classes.SubtitleCard}>{subTitle}</span>
                 </p>
               </div>
-              <span className={classes.Label}>INCLUDED with CoolPass</span>
+              <span className={classes.Label}>{ATTRACTIONS_label_included} {ATTRACTIONS_label_with_pass}</span>
               <span className={classes.Icon}
                      >
               <Heart 
@@ -113,6 +112,7 @@ function TopAttractions() {
             </div>
           );
         })}
+
       </Slider>
     </Layout>
   );

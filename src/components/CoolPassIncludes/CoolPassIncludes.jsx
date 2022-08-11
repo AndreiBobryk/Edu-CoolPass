@@ -4,8 +4,10 @@ import CardOffer from "./CardOffer/CardOffer";
 import classes from "./CoolPassIncludes.module.css";
 import { convertHtmlToReact } from "@hedgedoc/html-to-react/dist/convertHtmlToReact";
 import Layout from "../Layout/Layout";
+import {  useSelector } from "react-redux";
 
 function CoolPassIncludes() {
+  const contentInterface = useSelector(state => state.translation.language);
   const endpoint =
     "https://api2.praguecoolpass.com/pages/5fd771cc072e5479bded0f2b";
   const [offers, setOffers] = useState([]);
@@ -24,7 +26,7 @@ function CoolPassIncludes() {
   return (
     <Layout style={{ paddingLeft:'60px', paddingRight:'60px'}}>
       <h3 className={classes.Title}>
-        ALL-INCLUSIVE OFFER FOR YOUR PRAGUE SIGHTSEEING
+        {contentInterface.HOME_offers_title}
       </h3>
       {offers.map((offer, index) => {
         const description = content[index].features_list;
