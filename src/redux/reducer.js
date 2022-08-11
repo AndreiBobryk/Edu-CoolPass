@@ -4,6 +4,11 @@ const SET_LANGUAGE = "SET_LANGUAGE"
 const SET_CONTENT_MAIN_SECTION = "SET_CONTENT_MAIN_SECTION"
 const SET_CONTENT_TOP_ATTRACTIONS_SECTION = "SET_CONTENT_TOP_ATTRACTIONS_SECTION"
 const SET_CONTENT_BENEFITS_SECTION = 'SET_CONTENT_BENEFITS_SECTION'
+const SET_IMAGES_COOLPASSINCLUDES_SECTION = 'SET_IMAGES_COOLPASSINCLUDES_SECTION'
+const SET_CONTENT_COOLPASSINCLUDES_SECTION = 'SET_CONTENT_COOLPASSINCLUDES_SECTION'
+const SET_IMAGES_HOW_TO_USE_SECTION = 'SET_IMAGES_HOW_TO_USE_SECTION'
+const SET_CONTENT_HOW_TO_USE_SECTION = 'SET_CONTENT_HOW_TO_USE_SECTION'
+const SET_LATEST_NEWS_SECTION = 'SET_LATEST_NEWS_SECTION'
 
 const initState = {
     currentLanguage: 'en',
@@ -12,7 +17,13 @@ const initState = {
     count: 0,
     mainSection: {},
     topAttractions: [],
-    benefits: []
+    benefits: [],
+    imagesCoolPassIIncludes: [],
+    contentCoolPassIIncludes: [],
+    imagesHowToUse: [],
+    contentHowToUse: [],
+    latestNews: []
+
 }
 
 
@@ -54,6 +65,36 @@ export default function translationReducer(state = initState, action) {
                 benefits: action.payload
 
             }
+        case SET_IMAGES_COOLPASSINCLUDES_SECTION:
+            return {
+                ...state,
+                imagesCoolPassIIncludes: action.payload
+
+            }
+        case SET_CONTENT_COOLPASSINCLUDES_SECTION:
+            return {
+                ...state,
+                contentCoolPassIIncludes: action.payload
+
+            }
+        case SET_IMAGES_HOW_TO_USE_SECTION:
+            return {
+                ...state,
+                imagesHowToUse: action.payload
+
+            }
+        case SET_CONTENT_HOW_TO_USE_SECTION:
+            return {
+                ...state,
+                contentHowToUse: action.payload
+
+            }
+        case SET_LATEST_NEWS_SECTION:
+            return {
+                ...state,
+                latestNews: action.payload
+
+            }
 
 
 
@@ -71,3 +112,8 @@ export const setLanguage =(language) => ({type:SET_LANGUAGE, payload: language})
 export const setContentMainSection =(mainSection) => ({type:SET_CONTENT_MAIN_SECTION, payload: mainSection})
 export const setContentTopAttractionsSection =(topAttractions) => ({type:SET_CONTENT_TOP_ATTRACTIONS_SECTION, payload: topAttractions})
 export const setContentBenefitSection =(benefits) => ({type:SET_CONTENT_BENEFITS_SECTION, payload: benefits})
+export const setCoolPassIncludesImages =(imagesCoolPassIIncludes) => ({type:SET_IMAGES_COOLPASSINCLUDES_SECTION, payload: imagesCoolPassIIncludes})
+export const setCoolPassIncludesContent =(contentCoolPassIIncludes) => ({type:SET_CONTENT_COOLPASSINCLUDES_SECTION, payload: contentCoolPassIIncludes})
+export const setHowToUseImages =(imagesHowToUse) => ({type:SET_IMAGES_HOW_TO_USE_SECTION, payload: imagesHowToUse})
+export const setHowToUseContent =(contentHowToUse) => ({type:SET_CONTENT_HOW_TO_USE_SECTION, payload: contentHowToUse})
+export const setLatestNewsContent =(latestNews) => ({type:SET_LATEST_NEWS_SECTION, payload: latestNews})

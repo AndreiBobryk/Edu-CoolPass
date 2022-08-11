@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Button from "../Button/Button";
 import Layout from "../Layout/Layout";
 import Article from "./Article/Article";
@@ -8,17 +7,7 @@ import {  useSelector } from "react-redux";
 
 function LatestNews() {
   const contentInterface = useSelector(state => state.translation.language);
-  const endpoint = "https://api2.praguecoolpass.com/news";
-  const [articlesContent, setArticlesContent] = useState([]);
-
-  async function getArticles() {
-    const data = await axios.get(endpoint);
-    setArticlesContent(data.data);
-  }
-
-  useEffect(() => {
-    getArticles();
-  }, []);
+  const articlesContent = useSelector(state => state.translation.latestNews);
 
   return (
     <Layout>

@@ -8,6 +8,8 @@ import { setCurrentLanguageGlobal, setLanguage } from "../../../redux/reducer";
 import { getTranslate } from "../../../redux/actions/translate";
 import { getContentMainSection } from "../../../redux/actions/getContentMainSection";
 import { getContentBenefitSection } from "../../../redux/actions/getContentBenefitSection";
+import { getCoolPassIncludesContent } from "../../../redux/actions/getCoolPassIncludesSection";
+import { getContentHowToUse } from "../../../redux/actions/getContentHowToUseSection";
 
 const objLanguages = {
   'English': 'en',
@@ -93,6 +95,8 @@ function MultiLanguage() {
                   dispatch(getContentMainSection(value))
                   dispatch(getContentBenefitSection(value))
                   dispatch(setCurrentLanguageGlobal(value))
+                  dispatch(getCoolPassIncludesContent(value))
+                  dispatch(getContentHowToUse(value))
 
                 }
 

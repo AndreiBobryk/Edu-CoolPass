@@ -7,20 +7,8 @@ import {  useSelector } from "react-redux";
 
 function HowToUse() {
   const contentInterface = useSelector(state => state.translation.language);
-  const endpoint =
-    "https://api2.praguecoolpass.com/pages/5fd771cc072e5479bded0f2b";
-  const [contentStepsImages, setContentStepsImages] = useState([]);
-  const [contentStepsDescriptions, setContentStepsDescriptions] = useState([]);
-  async function getStepsInfo() {
-    const data = await axios.get(endpoint);
-    const pathImages = data.data.how_to_use.web_images;
-    const pathDescriptions = data.data.content.en.how_to_use.descriptions;
-    setContentStepsImages(pathImages);
-    setContentStepsDescriptions(pathDescriptions);
-  }
-  useEffect(() => {
-    getStepsInfo();
-  }, []);
+  const images = useSelector(state => state.translation.imagesHowToUse);
+  const content = useSelector(state => state.translation.contentHowToUse);
 
   return (
     <Layout>
@@ -28,12 +16,12 @@ function HowToUse() {
         {contentInterface.HOME_offers_title}
       </h3>
       <div className={classes.WrapperCard}>
-        {contentStepsImages.map((image, index) => {
+        {images.map((image, index) => {
           return (
             <CardStep
               image={image}
               index={index + 1}
-              description={contentStepsDescriptions[index]}
+              description={content[index]}
               key={index}
             />
           );

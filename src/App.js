@@ -17,6 +17,9 @@ import { getTranslate } from "./redux/actions/translate";
 import { getContentMainSection } from "./redux/actions/getContentMainSection";
 import { getContentTopAttractionsSection } from "./redux/actions/getContentTopAttractionsSection";
 import { getContentBenefitSection } from "./redux/actions/getContentBenefitSection";
+import { getCoolPassIncludesContent, getCoolPassIncludesImages } from "./redux/actions/getCoolPassIncludesSection";
+import { getContentHowToUse, getImagesHowToUse } from "./redux/actions/getContentHowToUseSection";
+import { getContentLatestNews } from "./redux/actions/getContentLatestNewsSection";
 
 function App() {
   useEffect(() => {
@@ -29,6 +32,11 @@ function App() {
     dispatch(getContentMainSection())
     dispatch(getContentTopAttractionsSection())
     dispatch(getContentBenefitSection())
+    dispatch(getCoolPassIncludesImages())
+    dispatch(getCoolPassIncludesContent())
+    dispatch(getImagesHowToUse())
+    dispatch(getContentHowToUse())
+    dispatch(getContentLatestNews())
   }, [])
 
   console.log('language', language)

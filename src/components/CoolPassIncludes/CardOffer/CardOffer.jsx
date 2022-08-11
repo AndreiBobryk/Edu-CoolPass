@@ -1,4 +1,5 @@
 import React from "react";
+import Alert from "../../Alert/Alert";
 import Button from "../../Button/Button";
 import classes from "./CardOffer.module.css";
 
@@ -12,7 +13,7 @@ function CardOffer (props) {
     <div className={classes.Wrapper}>
       
         <img src={url} alt="offerImage" className={classes.Image}/>
-        <p className={classes.Title}>MUSEUMS AND OTHER SIGHTS</p>
+        <p className={classes.Title}>{props.title}</p>
         <div className={classes.HoverMenu}>
             <div className={classes.HoverMenu__Wrapper}>
                 <div>
@@ -20,7 +21,7 @@ function CardOffer (props) {
             <p className={classes.HoverMenu__Description}>{props.description}</p>
             </div>
 
-            <Button text={props.textButton} style={{marginBottom:'20px'}}/>
+            <Button text={props.textButton} style={{marginBottom:'20px'}} onClick={Alert}/>
             </div>
         </div>
   

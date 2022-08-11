@@ -8,33 +8,23 @@ import {  useSelector } from "react-redux";
 
 function CoolPassIncludes() {
   const contentInterface = useSelector(state => state.translation.language);
-  const endpoint =
-    "https://api2.praguecoolpass.com/pages/5fd771cc072e5479bded0f2b";
-  const [offers, setOffers] = useState([]);
-  const [content, setContent] = useState([]);
-
-  async function getOffers() {
-    const data = await axios.get(endpoint);
-    setOffers(data.data.offers.web_images);
-    setContent(data.data.content.en.offers.items);
-  }
-
-  useEffect(() => {
-    getOffers();
-  }, []);
+  const { HOME_offers_title } = contentInterface;
+  const images =useSelector(state => state.translation.imagesCoolPassIIncludes)
+  const content =useSelector(state => state.translation.contentCoolPassIIncludes)
+  const currentLang = useSelector(state => state.translation.currentLanguage)
 
   return (
     <Layout style={{ paddingLeft:'60px', paddingRight:'60px'}}>
       <h3 className={classes.Title}>
-        {contentInterface.HOME_offers_title}
+        {HOME_offers_title}
       </h3>
-      {offers.map((offer, index) => {
-        const description = content[index].features_list;
-        const title = content[index].title;
-        const textButton = content[index].button_text;
+      {images.map((image, index) => {
+        const description = content[index]?.features_list;
+        const title = content[index]?.title;
+        const textButton = content[index]?.button_text;
         return (
           <CardOffer
-            image={offer}
+            image={image}
             key={index}
             title={title}
             description={convertHtmlToReact(description)}
@@ -42,6 +32,7 @@ function CoolPassIncludes() {
           />
         );
       })}
+    
     </Layout>
   );
 }
