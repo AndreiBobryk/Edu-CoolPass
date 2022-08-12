@@ -68,6 +68,7 @@ color: #FFFFFF;
     font-weight: 700;
     background: #FFFFFF;
     border: none;
+    
 }
 .AdultCalc__Count {
 
@@ -77,6 +78,10 @@ color: #FFFFFF;
     display: inline-block;
     vertical-align: top;
     padding-top: 12px;
+}
+
+.AdultCalc__Button {
+    cursor: pointer;
 }
 
 .ChildCalc {
