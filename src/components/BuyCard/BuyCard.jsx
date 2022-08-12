@@ -10,18 +10,9 @@ import {  useSelector } from "react-redux";
 
 function BuyCard() {
   const contentInterface = useSelector(state => state.translation.language);
-  const endpoint =
-    "https://api2.praguecoolpass.com/cardCategories?eshopId=77a85a2a-6b84-4d79-b856-dfafc14340a0";
-  const [cards, setCards] = useState([]);
+  const {BUY_COOLPASS_PRAGUE_CARD  } = contentInterface;
+  const cards = useSelector(state => state.translation.buyCard);
 
-  async function getCard() {
-    const data = await axios.get(endpoint);
-    setCards(data.data.cards);
-  }
-
-  useEffect(() => {
-    getCard();
-  }, []);
 
   const settings = {
     dots: true,
@@ -61,7 +52,7 @@ function BuyCard() {
 
   return (
     <Layout>
-      <h3 className={classes.Title}>{contentInterface.BUY_COOLPASS_PRAGUE_CARD}</h3>
+      <h3 className={classes.Title}>{BUY_COOLPASS_PRAGUE_CARD}</h3>
       <Slider {...settings}>
         {cards.map((card, index) => {
           const name = card.name.default;
@@ -73,6 +64,7 @@ function BuyCard() {
               title={name}
               priceAdult={priceAdult}
               priceChild={priceChild}
+              
             />
           );
         })}

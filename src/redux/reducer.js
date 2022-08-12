@@ -9,6 +9,8 @@ const SET_CONTENT_COOLPASSINCLUDES_SECTION = 'SET_CONTENT_COOLPASSINCLUDES_SECTI
 const SET_IMAGES_HOW_TO_USE_SECTION = 'SET_IMAGES_HOW_TO_USE_SECTION'
 const SET_CONTENT_HOW_TO_USE_SECTION = 'SET_CONTENT_HOW_TO_USE_SECTION'
 const SET_LATEST_NEWS_SECTION = 'SET_LATEST_NEWS_SECTION'
+const SET_HEADER_SECTION = 'SET_HEADER_SECTION'
+const SET_BUY_CARD_SECTION = 'SET_BUY_CARD_SECTION'
 
 const initState = {
     currentLanguage: 'en',
@@ -22,7 +24,9 @@ const initState = {
     contentCoolPassIIncludes: [],
     imagesHowToUse: [],
     contentHowToUse: [],
-    latestNews: []
+    latestNews: [],
+    header:[],
+    buyCard: []
 
 }
 
@@ -95,6 +99,18 @@ export default function translationReducer(state = initState, action) {
                 latestNews: action.payload
 
             }
+        case SET_HEADER_SECTION:
+            return {
+                ...state,
+                header: action.payload
+
+            }
+        case SET_BUY_CARD_SECTION:
+            return {
+                ...state,
+                buyCard: action.payload
+
+            }
 
 
 
@@ -117,3 +133,5 @@ export const setCoolPassIncludesContent =(contentCoolPassIIncludes) => ({type:SE
 export const setHowToUseImages =(imagesHowToUse) => ({type:SET_IMAGES_HOW_TO_USE_SECTION, payload: imagesHowToUse})
 export const setHowToUseContent =(contentHowToUse) => ({type:SET_CONTENT_HOW_TO_USE_SECTION, payload: contentHowToUse})
 export const setLatestNewsContent =(latestNews) => ({type:SET_LATEST_NEWS_SECTION, payload: latestNews})
+export const setHeaderContent =(header) => ({type:SET_HEADER_SECTION, payload: header})
+export const setBuyCardContent =(buyCard) => ({type:SET_BUY_CARD_SECTION, payload: buyCard})

@@ -20,6 +20,8 @@ import { getContentBenefitSection } from "./redux/actions/getContentBenefitSecti
 import { getCoolPassIncludesContent, getCoolPassIncludesImages } from "./redux/actions/getCoolPassIncludesSection";
 import { getContentHowToUse, getImagesHowToUse } from "./redux/actions/getContentHowToUseSection";
 import { getContentLatestNews } from "./redux/actions/getContentLatestNewsSection";
+import { getHeaderMenu } from "./redux/actions/getContentHeaderSection";
+import { getPriceBuyCard } from "./redux/actions/getPriceBuyCard";
 
 function App() {
   useEffect(() => {
@@ -37,6 +39,8 @@ function App() {
     dispatch(getImagesHowToUse())
     dispatch(getContentHowToUse())
     dispatch(getContentLatestNews())
+    dispatch(getHeaderMenu())
+    dispatch(getPriceBuyCard())
   }, [])
 
   console.log('language', language)

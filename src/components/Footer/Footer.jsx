@@ -6,30 +6,37 @@ import InputFooter from "./InputFooter/InputFooter";
 import NavFooter from "./NavFooter/NavFooter1";
 import {  useSelector } from "react-redux";
 
-const nav1 = [
-    'CoolPass / Prague Card',
-    'Using CoolPass',
-    'How You Save',
-    'Getting Your Pass',
-    'Sales & Collection Points',
-    'Customer Reviews'
-]
-const nav2 = [
-    'ATTRACTIONS',
-    'Sightseeing Tours',
-    'Prague Areas',
-    'Closures & Notices',
-    "What's On",
-    'Contact Us'
-]
-const nav3 = [
-    'About Us',
-    'Terms and Conditions',
-    'Cancellation & Refund',
-    'Privacy Policy',
-]
 function Footer () {
     const contentInterface = useSelector(state => state.translation.language);
+    const { FOOTER_USING_COOLPASS, FOOTER_how_you_save, FOOTER_get_your_pass, FOOTER_sales_points, FOOTER_reviews, ATTRACTIONS,
+        FOOTER_sightseeing_tours, FOOTER_areas, FOOTER_closures, FOOTER_whats_on, FOOTER_contact_us, 
+        FOOTER_about_us, FOOTER_terms_and_conditions, FOOTER_cancellation_and_refund,
+        FOOTER_privacy_policy, FOOTER_faq
+        } = contentInterface;
+
+    const nav1 = [
+        'CoolPass / Prague Card',
+        FOOTER_USING_COOLPASS,
+        FOOTER_how_you_save,
+        FOOTER_get_your_pass,
+        FOOTER_sales_points,
+        FOOTER_reviews
+    ]
+
+    const nav2 = [
+        ATTRACTIONS,
+        FOOTER_sightseeing_tours,
+        FOOTER_areas,
+        FOOTER_closures,
+        FOOTER_whats_on,
+        FOOTER_contact_us
+    ]
+    const nav3 = [
+        FOOTER_about_us,
+        FOOTER_terms_and_conditions,
+        FOOTER_cancellation_and_refund,
+        FOOTER_privacy_policy,
+    ]
 
     return (
         <footer className={classes.Footer}>
