@@ -19,7 +19,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    line-height: 90px;
+   
     color: #FFFFFF;
     padding-left: 20px;
     padding-top: 0;
@@ -27,6 +27,10 @@
     text-align: left;
     margin-top: 2px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+  
 
 }
 
@@ -44,10 +48,17 @@
 
 }
 
+.Images__Static {
+   
+    min-height: 540px;
+    width: 100%;
+}
+
 .Images {
     width: 100%;
     position: relative;
     z-index: 50;
+   
 }
 
 .Mobile {
@@ -63,4 +74,95 @@
     top: 287px;
     z-index: 500;
 
+}
+
+@media (max-width: 1279px ) {
+    .Wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+
+
+      
+    }
+
+    .Images__Static {
+   
+        min-height: 416px;
+        width: 100%;
+    }
+
+    .Mobile {
+
+        left: calc(50% - 111px);
+        top: 0;
+   
+    }
+    
+    .Card {
+ 
+        left: 50%;
+        top: 100px;
+    
+    
+    }
+
+    .TitleBenefit {
+        width: 100%;
+
+    }
+
+    .TextBenefit {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 767px) {
+
+    .Title {
+padding-left: 8px;
+    
+    }
+
+
+    .Images__Static {
+   
+        min-height: 237px;
+    
+    }
+
+    
+    .Mobile {
+  width: 125px;
+
+   
+    }
+    
+    .Card {
+        width: 172px;
+        left: 40%;
+        top: 75px;
+ 
+
+    
+    
+    }
+
+    
+    .TitleBenefit {
+       padding: 0 10px;
+       font-size: 16px;
+      justify-content: center;
+      text-align: center;
+
+    }
+
+    .TextBenefit {
+       padding: 10px 8px;
+       font-size: 12px;
+       line-height: 170%;
+      
+    }
+
+    
 }

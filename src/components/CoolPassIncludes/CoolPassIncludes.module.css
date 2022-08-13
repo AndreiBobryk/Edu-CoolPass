@@ -6,3 +6,13 @@
     margin-left: 10px;
 
 }
+
+@media (max-weight: 767px) {
+    
+    .Title {
+        padding-left: 8px;
+    }
+   
+
+    
+}

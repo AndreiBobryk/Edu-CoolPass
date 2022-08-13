@@ -5,7 +5,7 @@ import classes from "./CardOffer.module.css";
 
 
 function CardOffer (props) {
-
+     const {title, description, textButton } = props;
    
 
     const url = "https://static2.praguecoolpass.com/" + props.image;
@@ -13,15 +13,15 @@ function CardOffer (props) {
     <div className={classes.Wrapper}>
       
         <img src={url} alt="offerImage" className={classes.Image}/>
-        <p className={classes.Title}>{props.title}</p>
+        <p className={classes.Title}>{title}</p>
         <div className={classes.HoverMenu}>
             <div className={classes.HoverMenu__Wrapper}>
                 <div>
-            <p className={classes.HoverMenu__Title}>{props.title}</p>
-            <p className={classes.HoverMenu__Description}>{props.description}</p>
+            <p className={classes.HoverMenu__Title}>{title}</p>
+            <p className={classes.HoverMenu__Description}>{description}</p>
             </div>
 
-            <Button text={props.textButton} style={{marginBottom:'20px'}} onClick={Alert}/>
+            <Button text={textButton} style={{marginBottom:'20px'}} onClick={Alert}/>
             </div>
         </div>
   

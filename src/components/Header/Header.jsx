@@ -15,7 +15,7 @@ import { setCount } from "../../redux/reducer";
 function Header(props) {
   const dispatch =useDispatch()
   const contentInterface = useSelector(state => state.translation.language)
-
+  const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false)
   const [isHiddenHeaderClasses, setIsHiddenClasses] = useState("Header");
   const [isClass, setIsClass] = useState(classesBur.Burger);
   const [isHiddenBurgerMenu, setIsHiddenBurgerMenu] =
@@ -45,8 +45,10 @@ function Header(props) {
     if (isClass.split(" ").length === 1) {
       cls.push(classesBur.Open);
       setIsHiddenBurgerMenu("NavHeader");
+      setIsOpenBurgerMenu(true)
     } else {
       setIsHiddenBurgerMenu("NavHeader Hidden");
+      setIsOpenBurgerMenu(false)
     }
 
     setIsClass(cls.join(" "));
@@ -64,8 +66,9 @@ function Header(props) {
         <BurgerIcon onClick={toggleBurgerMenu} activeClass={isClass} />
         <div className={classes.Menu}>
           <Logo />
-          <NavHeader isHidden={isHiddenBurgerMenu} />
-          <div>
+          <NavHeader isHidden={isHiddenBurgerMenu} isOpenBurgerMenu={isOpenBurgerMenu} />
+          <div className={classes.Buttons}>
+          <div className={classes.Button__BuyOnline}>
             <Button
               text={contentInterface.BUY_NOW}
               style={{
@@ -81,6 +84,7 @@ function Header(props) {
           </div>
 
           <MultiLanguage />
+          </div>
         </div>
       </div>
     </header>

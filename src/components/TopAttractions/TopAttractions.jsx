@@ -1,24 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import classes from "./TopAttractions.module.css";
-import axios from "axios";
-import {SampleNextArrow, SamplePrevArrow} from "../Arrows/SampleArrow";
-import {ReactComponent as Heart} from "../../image/svg/heart.svg"
+import { SampleNextArrow, SamplePrevArrow } from "../Arrows/SampleArrow";
+import { ReactComponent as Heart } from "../../image/svg/heart.svg";
+import { ReactComponent as HeartFull } from "../../image/svg/heartFull.svg";
 import Layout from "../Layout/Layout";
 import Alert from "../Alert/Alert";
 import { useSelector } from "react-redux";
 
 function TopAttractions() {
-  const contentInterface = useSelector(state => state.translation.language);
-  const {ATTRACTIONS_label_included, ATTRACTIONS_label_with_pass, HOME_top_attractions_title} = contentInterface;
-  const contentTopAttractionSection = useSelector(state => state.translation.topAttractions)
-  const curLang = useSelector(state => state.translation.currentLanguage)
-
-
-
-
+  const [isHeartFull, setIsHeartFull] = useState(false);
+  const contentInterface = useSelector((state) => state.translation.language);
+  const {
+    ATTRACTIONS_label_included,
+    ATTRACTIONS_label_with_pass,
+    HOME_top_attractions_title,
+  } = contentInterface;
+  const attractions = useSelector((state) => state.translation.topAttractions);
+  const curLang = useSelector((state) => state.translation.currentLanguage);
 
   const settings = {
     dots: false,
@@ -35,8 +36,6 @@ function TopAttractions() {
           slidesToShow: 3,
           slidesToScroll: 3,
           dots: true,
-        
-         
         },
       },
       {
@@ -45,7 +44,6 @@ function TopAttractions() {
           slidesToShow: 2.5,
           slidesToScroll: 2,
           dots: true,
-         
         },
       },
       {
@@ -54,13 +52,12 @@ function TopAttractions() {
           slidesToShow: 2,
           slidesToScroll: 2,
           dots: true,
-         
         },
       },
       {
         breakpoint: 650,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 1.1,
           slidesToScroll: 1,
           nextArrow: null,
           prevArrow: null,
@@ -70,21 +67,23 @@ function TopAttractions() {
     ],
   };
 
-
-
-
   return (
     <Layout>
       <h3 className={classes.Title}>{HOME_top_attractions_title}</h3>
+       <div className={classes.Wrapper}>
       <Slider {...settings}>
-        {contentTopAttractionSection.map((el, index) => {
+        {attractions.map((el, index) => {
           const url = "https://static2.praguecoolpass.com/" + el.images[0];
-          
+
           const title = el.content[curLang].title;
           const subTitle = el.content[curLang].subtitle;
           return (
-            <div className={classes.Card} key={index} style={{width:'auto'}}>
-              <a href="/" onClick={Alert}>
+            <div
+              className={classes.Card}
+              key={index}
+              style={{ width: "auto" }}
+              onClick={Alert}
+            >
               <img
                 src={url}
                 alt="attraction"
@@ -95,25 +94,33 @@ function TopAttractions() {
                 }}
               />
               <div className={classes.Content}>
-                <p className={classes.TitleCard}>
+                <div className={classes.TitleCard}>
                   {title}
                   <br />
                   <span className={classes.SubtitleCard}>{subTitle}</span>
-                </p>
-              </div>
-              <span className={classes.Label}>{ATTRACTIONS_label_included} {ATTRACTIONS_label_with_pass}</span>
-              <span className={classes.Icon}
-                     >
-              <Heart 
+                </div>
+                <div
+                  className={classes.Icon}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    setIsHeartFull(!isHeartFull);
+                    console.log(isHeartFull);
+                    console.log(event.target);
 
-              />
+                    //  isHeartFull ? event.target.querySelector('path').setAttribute('fill', 'white') : event.target.setAttribute('fill', 'none');
+                  }}
+                >
+                  <Heart />
+                </div>
+              </div>
+              <span className={classes.Label}>
+                {ATTRACTIONS_label_included} {ATTRACTIONS_label_with_pass}
               </span>
-              </a>
             </div>
           );
         })}
-
       </Slider>
+      </div>
     </Layout>
   );
 }

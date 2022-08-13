@@ -1,5 +1,4 @@
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CardOffer from "./CardOffer/CardOffer";
 import classes from "./CoolPassIncludes.module.css";
 import { convertHtmlToReact } from "@hedgedoc/html-to-react/dist/convertHtmlToReact";
@@ -11,7 +10,6 @@ function CoolPassIncludes() {
   const { HOME_offers_title } = contentInterface;
   const images =useSelector(state => state.translation.imagesCoolPassIIncludes)
   const content =useSelector(state => state.translation.contentCoolPassIIncludes)
-  const currentLang = useSelector(state => state.translation.currentLanguage)
 
   return (
     <Layout style={{ paddingLeft:'60px', paddingRight:'60px'}}>

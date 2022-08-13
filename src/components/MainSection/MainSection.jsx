@@ -1,11 +1,11 @@
 
 import CarouselMain from "../Carousel/Carousel";
-import classes from "./HeruSection.module.css";
+import classes from "./MainSection.module.css";
 import {ReactComponent as IconSearch} from "../../image/svg/iconSearch.svg"
 import Alert from "../Alert/Alert";
 import { useSelector } from "react-redux";
 
-function HeroSection() {
+function MainSection() {
   const contentInterface = useSelector(state => state.translation.language)
   const contentMainSection = useSelector(state => state.translation.mainSection)
   console.log('contentMainSection', contentMainSection)
@@ -40,4 +40,4 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+export default MainSection;

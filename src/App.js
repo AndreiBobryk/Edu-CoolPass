@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Header from "./components/Header/Header";
 
-import HeroSection from "./components/HeroSection/HeroSection";
+import MainSection from "./components/MainSection/MainSection";
 import TopAttractions from "./components/TopAttractions/TopAttractions";
 import Benefits from "./components/Benefits/Benefits";
 import CoolPassIncludes from "./components/CoolPassIncludes/CoolPassIncludes";
@@ -49,15 +49,15 @@ function App() {
   return (
     <div className="App">
       <Header  />
-      <HeroSection /> 
+      <MainSection/>
       <TopAttractions />
       <Benefits /> 
-      <CoolPassIncludes />
-      <HowToUse />
+      {/* <CoolPassIncludes /> */}
+      {/*<HowToUse />
       <LatestNews />
       <BuyCard />
       <Reviews />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

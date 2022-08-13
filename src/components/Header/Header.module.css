@@ -20,6 +20,10 @@
   align-content: center;
 } 
 
+.Buttons {
+  display: flex;
+}
+
 @media (max-width: 1279px) {
 
   .Wrapper {
@@ -38,6 +42,10 @@
   height: 100%;
   padding-left: 9px;
   padding-right: 9px;
+}
+
+.Button__BuyOnline {
+  display: none;
 }
 
 

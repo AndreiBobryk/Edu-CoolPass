@@ -3,18 +3,20 @@
 .Card {
     position: relative;
     width: 270px !important;
+    cursor: pointer;
 }
 
 .Content {
     position: absolute;
+    display: flex;
     bottom: 0;
     height: 60px;
     width: 270px;
     background: rgba(37, 44, 62, 0.6);
     border-radius: 0px 0px 10px 10px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+
+    justify-content: space-between;
 
 }
 
@@ -71,16 +73,17 @@
 }
 
 .Icon {
-    position: absolute;
-    bottom: 18px;
-    right: 30px;
+    margin: auto 13px 18px 0;  
+ 
 }
+
+
 
 .Icon svg {
    fill:none;
 }
 
-.Icon svg:hover {
+.Icon svg path:hover {
    fill:white;
 }
 
@@ -96,9 +99,30 @@
 
 }
 
+
+
 @media (max-width: 767px) {
 
+    .Title {
+        padding-left: 8px;
+     }
+
+     .Wrapper {
+        
+        width: 100%;
+        overflow-x: hidden;
+    
+    }
 
 
     
+}
+
+@media (max-width: 450px) {
+    .Card {
+        /* width: 250px !important; */
+    }
+    .Wrapper {
+        padding-left: 8px;
+     }
 }
