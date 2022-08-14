@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.14bdb98b.css",
-    "main.js": "./static/js/main.6307a6ff.js",
+    "main.css": "./static/css/main.6b840628.css",
+    "main.js": "./static/js/main.a10c62ab.js",
     "static/js/787.8731b9a6.chunk.js": "./static/js/787.8731b9a6.chunk.js",
     "static/media/PragueCard_2019_002 1.png": "./static/media/PragueCard_2019_002 1.c5d1f197943f5fd98282.png",
     "static/media/mobile.png": "./static/media/mobile.0f2004e57906f6e1d112.png",
@@ -16,12 +16,12 @@
     "static/media/iconSearch.svg": "./static/media/iconSearch.cca0c365f174baa2bfe512f87b239917.svg",
     "static/media/arrowLeft.svg": "./static/media/arrowLeft.8e02d42a3dd01ef58a15eb0b201a3794.svg",
     "static/media/arrowDown.svg": "./static/media/arrowDown.9fc7c5137e9c1a2a693a5de140a1a6fa.svg",
-    "main.14bdb98b.css.map": "./static/css/main.14bdb98b.css.map",
-    "main.6307a6ff.js.map": "./static/js/main.6307a6ff.js.map",
+    "main.6b840628.css.map": "./static/css/main.6b840628.css.map",
+    "main.a10c62ab.js.map": "./static/js/main.a10c62ab.js.map",
     "787.8731b9a6.chunk.js.map": "./static/js/787.8731b9a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.14bdb98b.css",
-    "static/js/main.6307a6ff.js"
+    "static/css/main.6b840628.css",
+    "static/js/main.a10c62ab.js"
   ]
 }
