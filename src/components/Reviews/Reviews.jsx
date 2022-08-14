@@ -12,9 +12,11 @@ import Button from "../Button/Button";
 import { SampleNextArrow, SamplePrevArrow } from "../Arrows/SampleArrow";
 import Layout from "../Layout/Layout";
 import {  useSelector } from "react-redux";
+import Alert from "../Alert/Alert";
 
 function Reviews() {
   const contentInterface = useSelector(state => state.translation.language);
+  const {REVIEWS_what_do_customers_say, REVIEWS_see_all, REVIEWS_write_your_opinion } = contentInterface;
   const endpoint = "https://api2.praguecoolpass.com/review/approved";
   const [reviews, setReviews] = useState([]);
 
@@ -45,6 +47,7 @@ function Reviews() {
           slidesToScroll: 2,
           infinite: true,
           dots: true,
+          arrows: false,
         },
       },
       {
@@ -53,6 +56,7 @@ function Reviews() {
           slidesToShow: 1,
           slidesToScroll: 1,
           initialSlide: 2,
+          arrows: false,
         },
       },
       {
@@ -60,6 +64,7 @@ function Reviews() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          arrows: false,
         },
       },
     ],
@@ -69,7 +74,7 @@ function Reviews() {
     <Layout>
       <div className={classes.Header}>
         <h3 className={classes.Title}>
-          {contentInterface.REVIEWS_what_do_customers_say}
+          {REVIEWS_what_do_customers_say}
         </h3>
 
         <div className={classes.Rating}>
@@ -105,24 +110,14 @@ function Reviews() {
       </Slider>
       <div style={{ float: "right" }}>
         <Button
-          text={contentInterface.REVIEWS_see_all}
-          style={{
-            background: "white",
-            color: "black",
-            border: "solid 1px black",
-            borderRadius: "5px",
-            marginRight: "8px",
-          }}
+          text={REVIEWS_see_all}
+          className={classes.Button__See}
+          onClick={Alert}
         />
         <Button
-          text={contentInterface.REVIEWS_write_your_opinion}
-          style={{
-            background: "white",
-            color: "black",
-            border: "solid 1px black",
-            borderRadius: "5px",
-            marginRight: "15px",
-          }}
+          text={REVIEWS_write_your_opinion}
+          className={classes.Button__Write}
+          onClick={Alert}
         />
       </div>
     </Layout>

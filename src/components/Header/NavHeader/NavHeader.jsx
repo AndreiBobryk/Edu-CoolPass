@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import { useSelector } from "react-redux";
-import Button from "../../Button/Button";
+import Alert from "../../Alert/Alert";
 import "./NavHeader.css";
 
 function NavHeader (props) {
-  console.log(props)
+
   const contentNavMenu = useSelector(state => state.translation.header);
   const currentLang = useSelector(state => state.translation.currentLanguage);
 
@@ -21,7 +21,7 @@ function NavHeader (props) {
             <li><a href={url}>{title}</a></li>
           )
         })}
-        { props.isOpenBurgerMenu ? <li><button className="Button__burger">BUY ONLINE</button></li> : null }
+        { props.isOpenBurgerMenu ? <li><button className="Button__burger" onClick={Alert}>BUY ONLINE</button></li> : null }
       </ul>
     </nav>
     

@@ -18,3 +18,23 @@
     flex-direction: column;
 
 }
+
+.Button {
+    width:87px; 
+    height:48px; 
+    float: left;
+    margin-bottom: 12px; 
+    display:block;
+}
+
+
+@media (max-width: 1279px) {
+    .Wrapper {
+        flex-wrap: wrap;
+        padding-left: calc(16px + (70 - 16) * ((100vw - 320px) / (1279 - 320)));
+        padding-top: calc(30px + (42 - 30) * ((100vw - 320px) / (1279 - 320)));
+        row-gap: 32px;
+    }
+
+    
+}

@@ -28,3 +28,60 @@
 .Slider {
     margin-bottom: 20px;
 }
+
+.Button__See, .Button__Write {
+    background: white;
+    color: black;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin-right: 8px;
+    text-transform: uppercase;
+
+
+}
+
+.Button__Write {
+    margin-right: 15px;
+}
+
+.Button__See:hover, 
+.Button__Write:hover {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+}
+
+@media (max-width: 1279px) {
+    .Header {
+        flex-direction: column;
+ 
+    }
+    .Title {
+        margin-bottom: 10px;
+    }
+    .Rating {
+        margin-bottom: 31px;
+    }
+}
+
+@media (max-width: 767px) {
+    .Title, .Rating {
+       padding-left: 8px;
+       padding-right: 8px;
+    }
+
+    .Button__See {
+        width: 150px;
+        margin-right: 6px;
+        font-size: 12px;
+
+    }
+
+    .Button__Write {
+        width: 148px;
+        margin-right: 8px;
+        font-size: 12px;
+        padding: 10px;
+
+    }
+
+}

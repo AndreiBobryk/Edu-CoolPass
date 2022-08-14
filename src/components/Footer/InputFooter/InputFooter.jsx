@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../../Button/Button";
 import classes from "./InputFooter.module.css";
 import {  useSelector } from "react-redux";
+import Alert from "../../Alert/Alert"
 
 
 
@@ -13,9 +14,12 @@ function InputFooter () {
     return (
     <div className={classes.Wrapper} >
         <p className={classes.P1}>{NEWS_AND_UPDATES}</p>
-        <div style={{height:'48px', marginBottom: '12px'}} >
-        <input placeholder={ENTER_EMAIL_PLACEHOLDER} />
-        <Button text={EMAIL_SUBSCRIBE} style={{height:'48px', float:'left'}}/>
+        <div  className={classes.Input} >
+        <input placeholder={ENTER_EMAIL_PLACEHOLDER} className={classes.Input__input}/>
+        <Button 
+         text={EMAIL_SUBSCRIBE}
+         className={classes.Button}
+         onClick={Alert}/>
         </div>
         <p className={classes.P2}>CoolPass 2020</p>
         <p className={classes.P2}>Prague Card 1992-2020</p>

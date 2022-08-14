@@ -56,6 +56,7 @@ function Header(props) {
 
 
   function handleClickButton() {
+    console.log('click')
     Alert();
     dispatch(setCount(1))
   }

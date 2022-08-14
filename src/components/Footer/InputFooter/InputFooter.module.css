@@ -5,6 +5,25 @@
 
 }
 
+.Input {
+    height: 48px;
+    margin-bottom: 12px;
+    display: flex;
+}
+
+.Input__input {
+    flex-basis: 227px;
+    flex-shrink: 2;
+}
+
+.Button {
+    height: 48px; 
+    /* float: left; */
+    border-radius: 0 5px 5px 0;
+    flex-shrink: 1;
+    text-transform: uppercase;
+}
+
 
 .P1 {
     color: #fff;
@@ -34,10 +53,10 @@
 }
 
 .Wrapper input {
-    padding: 13px 88px 12px 24px;
+    padding: 13px 8px 12px 24px;
     border-radius: 5px 0 0 5px;
     margin-bottom: 14px;
-    float: left;
+  
     display: inline;
     width: 227px;
     height: 48px;
@@ -49,4 +68,19 @@
     color: rgba(37, 44, 62, 0.6);
     line-height: 165px;
 
+}
+
+@media (max-width: 767px) {
+
+    .Input__input {
+        flex-basis: 180px;
+    }
+
+    .Button {
+        font-size: 14px;
+        padding: 5px;
+    }
+    .P2, .P3, .P1, .Input {
+        max-width: 290px;
+    }
 }

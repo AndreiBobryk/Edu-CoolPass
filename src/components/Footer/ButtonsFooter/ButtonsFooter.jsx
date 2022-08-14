@@ -11,7 +11,7 @@ function ButtonsFooter () {
     
     return (
     <div className={classes.Wrapper} >
-        <p>{DOWNLOAD}</p>
+        <p className={classes.Title}>{DOWNLOAD}</p>
         <p>{FOOTER_prague_coolpass_app}</p>
         <a href="/"><img src={appStore} alt="appStore" className={classes.AppStore} /></a>
         <a href="/"><img src={googlePlay} alt="appStore" className={classes.AppStore} /></a>

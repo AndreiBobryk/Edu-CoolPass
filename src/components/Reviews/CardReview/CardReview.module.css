@@ -53,3 +53,50 @@
     margin-bottom: 12px;
 
 }
+
+@media (max-width: 1279px) {
+
+    .Wrapper {
+        width: calc(290px + (367 - 290) * ((100vw - 320px) / (1279 - 320)));
+        height: calc(290px + (255 - 290) * ((100vw - 320px) / (1279 - 320)));
+    }
+    
+}
+
+@media (max-width: 767px) { 
+
+    .Wrapper {
+        margin-left: 15px;
+    }
+
+    .Rating {
+        margin-left: 10px;
+    }
+
+    .Title {
+        padding: 11px 13px;
+        font-size: 16px;
+       
+    
+    }
+
+    .Date {
+        padding: 0 0 11px 13px;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .Text {
+        padding: 0 13px;
+    }
+
+    .Author {
+
+        bottom: 16px;
+        left: 13px;
+    
+    
+    }
+
+
+}

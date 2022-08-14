@@ -120,7 +120,9 @@ a {
     }
 
     .Button__burger {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: #DA4B07;
         border: #FFFFFF solid 1px;
         width: 258px;
