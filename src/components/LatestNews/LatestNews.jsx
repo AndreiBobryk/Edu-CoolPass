@@ -4,6 +4,7 @@ import Layout from "../Layout/Layout";
 import Article from "./Article/Article";
 import classes from "./LatestNews.module.css";
 import {  useSelector } from "react-redux";
+import Alert from "../Alert/Alert";
 
 function LatestNews() {
   const contentInterface = useSelector(state => state.translation.language);
@@ -26,10 +27,11 @@ function LatestNews() {
           />
         ) : null;
       })}
-      <div className={classes.Button}>
+      <div className={classes.Wrap__button}>
         <Button
           text={contentInterface.SEE_ALL_NEWS}
-          style={{ minWidth: "228px", height: "48px" }}
+          className={classes.Button}
+          onClick={Alert}
         />
       </div>
     </Layout>

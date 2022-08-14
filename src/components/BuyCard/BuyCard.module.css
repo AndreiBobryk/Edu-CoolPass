@@ -7,7 +7,10 @@
 
 .Ps {
     display: flex;
-    gap: 20px;
+
+    row-gap: 0px;
+    column-gap: 20px;
+    flex-wrap: nowrap;
 
 }
 
@@ -19,6 +22,12 @@
 .Ps__Item:last-child {
     font-size: 14px;
     font-weight: 700;
+}
+
+.Ps__Item:last-child div {
+    margin-bottom: 14px;
+    margin-left: 8px;
+    padding-left: 8px;
 }
 
 .Ps__Item ul {
@@ -35,4 +44,24 @@
 .Ps__Item ul li::marker {
     color: red;
     font-size: 1.5em;
+  }
+
+  @media (max-width: 1279px) {
+    .Ps {
+        flex-wrap: wrap;
+    }
+    
+  }
+
+  @media (max-width: 767px) {
+   
+   .Title {
+    padding-left: 8px;
+   }
+
+   .Ps {
+    margin-left: 8px;
+   } 
+   
+    
   }

@@ -12,10 +12,11 @@ function CoolPassIncludes() {
   const content =useSelector(state => state.translation.contentCoolPassIIncludes)
 
   return (
-    <Layout style={{ paddingLeft:'60px', paddingRight:'60px'}}>
+    <Layout/*  style={{ paddingLeft:'60px', paddingRight:'60px'}} */>
       <h3 className={classes.Title}>
         {HOME_offers_title}
       </h3>
+      <div className={classes.Wrapper}>
       {images.map((image, index) => {
         const description = content[index]?.features_list;
         const title = content[index]?.title;
@@ -30,6 +31,7 @@ function CoolPassIncludes() {
           />
         );
       })}
+      </div>
     
     </Layout>
   );

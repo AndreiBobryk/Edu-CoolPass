@@ -6,10 +6,9 @@ function Article (props) {
    const url = "https://static2.praguecoolpass.com/" + props.image;
 
    const description = convertHtmlToReact(props.description.slice(0, 575) + '...</p>');
-   const style = {flexDirection: props.style}
 
     return (
-        <div className={classes.Wrapper} style={style}>
+        <div className={classes.Wrapper} /* style={style} */>
             <div>
                 <img src={url} alt="newsImage" className={classes.Image} />
             </div>

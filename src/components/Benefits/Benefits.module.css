@@ -1,5 +1,4 @@
 .Wrapper {
-
     display: flex;
 }
 
@@ -12,14 +11,12 @@
 
 .TitleBenefit {
     background: #2F384F;
-    box-sizing: border-box;
     width: 656px;
     height: 90px;
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
-   
     color: #FFFFFF;
     padding-left: 20px;
     padding-top: 0;
@@ -30,7 +27,7 @@
     display: flex;
     align-items: center;
     text-transform: uppercase;
-  
+
 
 }
 
@@ -39,17 +36,13 @@
     width: 656px;
     text-align: left;
     padding: 15px 20px;
-    font-family: 'Open Sans';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 165%;
     color: #252527;
-
 }
 
 .Images__Static {
-   
     min-height: 540px;
     width: 100%;
 }
@@ -58,35 +51,31 @@
     width: 100%;
     position: relative;
     z-index: 50;
-   
+
 }
 
 .Mobile {
     position: absolute;
     left: 67px;
-    top: 151px;
+    top: 80px;
     z-index: 1000;
 }
 
 .Card {
     position: absolute;
     left: 198px;
-    top: 287px;
+    top: 200px;
     z-index: 500;
 
 }
 
-@media (max-width: 1279px ) {
+@media (max-width: 1279px) {
     .Wrapper {
         flex-direction: column-reverse;
         align-items: center;
-
-
-      
     }
 
     .Images__Static {
-   
         min-height: 416px;
         width: 100%;
     }
@@ -95,15 +84,10 @@
 
         left: calc(50% - 111px);
         top: 0;
-   
     }
-    
     .Card {
- 
         left: 50%;
         top: 100px;
-    
-    
     }
 
     .TitleBenefit {
@@ -114,55 +98,55 @@
     .TextBenefit {
         width: 100%;
     }
-    
+
 }
 
 @media (max-width: 767px) {
 
     .Title {
-padding-left: 8px;
-    
+        padding-left: 8px;
+
     }
 
 
     .Images__Static {
-   
+
         min-height: 237px;
-    
+
     }
 
-    
+
     .Mobile {
-  width: 125px;
+        width: 125px;
 
-   
+
     }
-    
+
     .Card {
         width: 172px;
         left: 40%;
         top: 75px;
- 
 
-    
-    
+
+
+
     }
 
-    
+
     .TitleBenefit {
-       padding: 0 10px;
-       font-size: 16px;
-      justify-content: center;
-      text-align: center;
+        padding: 0 10px;
+        font-size: 16px;
+        justify-content: center;
+        text-align: center;
 
     }
 
     .TextBenefit {
-       padding: 10px 8px;
-       font-size: 12px;
-       line-height: 170%;
-      
+        padding: 10px 8px;
+        font-size: 12px;
+        line-height: 170%;
+
     }
 
-    
+
 }

@@ -6,17 +6,25 @@ import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import Card from "./Card/Card";
 import axios from "axios";
 import Layout from "../Layout/Layout";
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 function BuyCard() {
-  const contentInterface = useSelector(state => state.translation.language);
-  const {BUY_COOLPASS_PRAGUE_CARD  } = contentInterface;
-  const cards = useSelector(state => state.translation.buyCard);
-
+  const contentInterface = useSelector((state) => state.translation.language);
+  const {
+    BUY_COOLPASS_PRAGUE_CARD,
+    CALCULATOR_card_validity,
+    CALCULATOR_child_card_validity_tip,
+    CALCULATOR_student_id_info,
+    ADULT_AGE,
+    STUDENT_AGE,
+    CHILD_AGE,
+  } = contentInterface;
+  const cards = useSelector((state) => state.translation.buyCard);
 
   const settings = {
     dots: true,
     infinite: false,
+    arrows: false,
     speed: 500,
     slidesToShow: 3.05,
     slidesToScroll: 3,
@@ -26,7 +34,7 @@ function BuyCard() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2.05,
+          slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
           dots: true,
@@ -64,7 +72,6 @@ function BuyCard() {
               title={name}
               priceAdult={priceAdult}
               priceChild={priceChild}
-              
             />
           );
         })}
@@ -73,28 +80,25 @@ function BuyCard() {
         <div className={classes.Ps__Item}>
           <ul>
             <li>
-              Prague CoolPass/Card is valid for consecutive days, not hours.
+              {CALCULATOR_card_validity}
             </li>
             <li>
-              Child/Student Pass is valid for children 6-16 years old and
-              students on daily studies up to 26 years old.
+              {CALCULATOR_child_card_validity_tip}
             </li>
           </ul>
         </div>
         <div className={classes.Ps__Item}>
           <ul>
             <li>
-              Any national or international student ID is OK. You do not need it
-              when buying Pass, but you could be asked to show it when entering
-              the attractions with a student CoolPass.
+              {CALCULATOR_student_id_info}
             </li>
           </ul>
         </div>
 
         <div className={classes.Ps__Item}>
-          <div>ADULT 16+ years</div>
-          <div>STUDENT 16 - 26 years</div>
-          <div>CHILD 6-16 years</div>
+          <div>{ADULT_AGE}</div>
+          <div>{STUDENT_AGE}</div>
+          <div>{CHILD_AGE}</div>
         </div>
       </div>
     </Layout>

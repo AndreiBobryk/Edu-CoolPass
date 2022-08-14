@@ -10,6 +10,11 @@
     padding-bottom: 30px;
 }
 
+.Wrapper:nth-child(odd) {
+    flex-direction: row-reverse;
+ 
+}
+
 .Description {
     text-align: left;
     padding-bottom: 25px;
@@ -29,8 +34,7 @@
     cursor: pointer;
     margin-top: 25px;
     text-decoration: underline;
-    text-transform: capitalize;
-    font-family: Open Sans,sans-serif;
+    text-transform: capitalize;;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -41,4 +45,49 @@
 
 .Link:hover {
     text-decoration: none;
+}
+
+@media (max-width: 1279px) {
+    .Wrapper {
+       flex-direction: column;
+    }
+    
+    .Wrapper:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+
+
+}
+
+
+@media (max-width: 767px) { 
+
+    .Wrapper:nth-child(odd) {
+        flex-direction: column;
+    }
+
+
+    .Image {
+        width: 100vw;
+        border-radius: 0;
+        height: auto;
+    }
+
+    .Description, .Title {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .Description {
+        line-height: 165%;
+    }
+    .Link {
+       
+        margin-top: 10px;
+        padding-left: 8px;
+    
+    }
+
+    .Wrapper {
+        padding-bottom: 15px;
+    }
 }

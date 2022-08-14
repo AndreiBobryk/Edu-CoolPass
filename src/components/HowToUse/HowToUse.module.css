@@ -5,17 +5,28 @@
     
 }
 
-.Wrapper  {
-    box-sizing: border-box;
-    max-width: 1280px;
-    margin: auto;
-    padding-left: 70px;
-    padding-right: 70px;
 
+.CardStep {
+    margin-left: 25px;
 }
 
-.WrapperCard {
-    display: flex;
-   
+
+
+@media (max-width: 1279px) {
+
+    
 }
+
+
+
+@media (max-width: 767px) {
+    
+    .Title {
+        padding-left: 8px;
+    }
+       
+    
+        
+}
+
 

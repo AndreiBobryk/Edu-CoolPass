@@ -49,14 +49,14 @@ function App() {
   return (
     <div className="App">
       <Header  />
-      <MainSection/>
+      {/* <MainSection/>
       <TopAttractions />
       <Benefits /> 
-      {/* <CoolPassIncludes /> */}
-      {/*<HowToUse />
-      <LatestNews />
+      <CoolPassIncludes />
+      <HowToUse />
+      <LatestNews /> */}
       <BuyCard />
-      <Reviews />
+      {/*<Reviews />
       <Footer /> */}
     </div>
   );

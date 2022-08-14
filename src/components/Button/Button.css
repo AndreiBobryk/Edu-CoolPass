@@ -1,24 +1,17 @@
-.Button {
+button {
     box-sizing: border-box;
     background: #DA4B07;
     border-radius: 5px;
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     line-height: 130%;
     cursor: pointer;
     color: #FFFFFF;
-    /* padding-left: 20px;
-    padding-right: 20px; */
     padding: 10px 20px;
-
     border: none;
-
-
-
 }
 
-.Button:hover {
+button:hover {
     background: #ef5106;
 }

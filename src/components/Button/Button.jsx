@@ -1,18 +1,11 @@
 import "./Button.css";
 
-function Button (props) {
-  
-
+function Button ({className, style, onClick, text}) {
     return (
-        <button className="Button" style={props.style} onClick={props.onClick}  >
-            {props.text}
+        <button className={className} style={style} onClick={onClick}  >
+            {text}
         </button>
     )
-
-    
-
-  
-
 }
 
 export default Button;

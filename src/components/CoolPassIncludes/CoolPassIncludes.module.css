@@ -7,7 +7,23 @@
 
 }
 
-@media (max-weight: 767px) {
+.Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+@media (max-width: 1279px) {
+    
+    .Wrapper {
+        justify-content: center;
+    }
+   
+
+    
+}
+@media (max-width: 767px) {
     
     .Title {
         padding-left: 8px;

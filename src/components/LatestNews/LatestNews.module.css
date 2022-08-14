@@ -5,6 +5,22 @@
 }
 
 
-.Button {
+.Wrap__button {
 float: right;
 }
+
+.Button {
+    min-width: 228px;
+    height: 48px;
+}
+
+@media (max-width: 767px) {
+    .Wrap__button {
+        float: initial;
+        }
+    .Button {
+        width: 304px;
+    }
+    
+}
+
