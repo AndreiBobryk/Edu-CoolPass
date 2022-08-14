@@ -168,7 +168,21 @@
 
 @media (max-width: 550px) {
     .HeroSection {
-        margin-bottom: 100px;
+        margin-bottom: 130px;
+    }
+    
+}
+
+@media (max-width: 426px) {
+    .Subtitle {
+        margin-bottom: 120px;
+    }
+    
+}
+
+@media (max-width: 376px) {
+    .Subtitle {
+        margin-bottom: 110px;
     }
     
 }

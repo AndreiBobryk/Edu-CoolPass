@@ -21,6 +21,10 @@ float: right;
     .Button {
         width: 304px;
     }
+
+    .Title {
+        padding-left: 8px;
+    }
     
 }
 

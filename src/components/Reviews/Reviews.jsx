@@ -27,6 +27,11 @@ function Reviews() {
 
   useEffect(() => {
     getReviews();
+    
+    setTimeout(()=> {
+      document.querySelector('#slider3').querySelector('.slick-track').style.transform = 'translate3d(0px, 0px, 0px)';
+    }, 1000)
+  
   }, []);
 
   const settings = {
@@ -91,6 +96,7 @@ function Reviews() {
           />
         </div>
       </div>
+      <div id="slider3">
       <Slider {...settings} className={classes.Slider}>
         {reviews.map((review, index) => {
           while (index <= 14) {
@@ -108,6 +114,7 @@ function Reviews() {
           }
         })}
       </Slider>
+      </div>
       <div style={{ float: "right" }}>
         <Button
           text={REVIEWS_see_all}

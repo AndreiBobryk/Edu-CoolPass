@@ -21,6 +21,14 @@ function BuyCard() {
   } = contentInterface;
   const cards = useSelector((state) => state.translation.buyCard);
 
+  useEffect(()=>{
+
+    setTimeout(()=> {
+      document.querySelector('#slider2').querySelector('.slick-track').style.transform = 'translate3d(0px, 0px, 0px)';
+    }, 900)
+    
+  }, [])
+
   const settings = {
     dots: true,
     infinite: false,
@@ -61,6 +69,7 @@ function BuyCard() {
   return (
     <Layout>
       <h3 className={classes.Title}>{BUY_COOLPASS_PRAGUE_CARD}</h3>
+      <div id="slider2">
       <Slider {...settings}>
         {cards.map((card, index) => {
           const name = card.name.default;
@@ -76,6 +85,7 @@ function BuyCard() {
           );
         })}
       </Slider>
+      </div>
       <div style={{ marginTop: "40px" }} className={classes.Ps}>
         <div className={classes.Ps__Item}>
           <ul>
