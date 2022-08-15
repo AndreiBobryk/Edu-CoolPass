@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.6b840628.css",
-    "main.js": "./static/js/main.a10c62ab.js",
+    "main.css": "./static/css/main.8e631abc.css",
+    "main.js": "./static/js/main.ea84930e.js",
     "static/js/787.8731b9a6.chunk.js": "./static/js/787.8731b9a6.chunk.js",
     "static/media/PragueCard_2019_002 1.png": "./static/media/PragueCard_2019_002 1.c5d1f197943f5fd98282.png",
     "static/media/mobile.png": "./static/media/mobile.0f2004e57906f6e1d112.png",
@@ -10,18 +10,17 @@
     "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
     "static/media/heart.svg": "./static/media/heart.9c49d454402e381cfbe3f28da4bdb86d.svg",
-    "static/media/heartFull.svg": "./static/media/heartFull.9aa709837a830921ce79a3f5fed7f213.svg",
     "static/media/arrowRight.svg": "./static/media/arrowRight.17df47fb8388be2ee1ad92447ececbb5.svg",
     "index.html": "./index.html",
     "static/media/iconSearch.svg": "./static/media/iconSearch.cca0c365f174baa2bfe512f87b239917.svg",
     "static/media/arrowLeft.svg": "./static/media/arrowLeft.8e02d42a3dd01ef58a15eb0b201a3794.svg",
     "static/media/arrowDown.svg": "./static/media/arrowDown.9fc7c5137e9c1a2a693a5de140a1a6fa.svg",
-    "main.6b840628.css.map": "./static/css/main.6b840628.css.map",
-    "main.a10c62ab.js.map": "./static/js/main.a10c62ab.js.map",
+    "main.8e631abc.css.map": "./static/css/main.8e631abc.css.map",
+    "main.ea84930e.js.map": "./static/js/main.ea84930e.js.map",
     "787.8731b9a6.chunk.js.map": "./static/js/787.8731b9a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b840628.css",
-    "static/js/main.a10c62ab.js"
+    "static/css/main.8e631abc.css",
+    "static/js/main.ea84930e.js"
   ]
 }
