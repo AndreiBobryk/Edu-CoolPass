@@ -2,8 +2,29 @@
     min-height: 550px; 
 }
 
+.Wrapper {
+    position: relative;
+}
+
+.Author {
+    position: absolute;
+    font-size: 12px;
+    color: #F9F9FB;
+    bottom: 10px;
+    right: 15%;
+
+
+}
+
 @media (max-width: 1279px) {
     .Img {
         min-height: calc(224px + (550 - 224) * ((100vw - 320px) / (1279 - 320)));
     }  
+}
+
+@media (max-width: 767px) {
+    .Author {
+        display: none;
+    }
+    
 }

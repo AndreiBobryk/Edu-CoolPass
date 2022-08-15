@@ -9,21 +9,23 @@ import Alert from "../Alert/Alert";
 function LatestNews() {
   const contentInterface = useSelector(state => state.translation.language);
   const articlesContent = useSelector(state => state.translation.latestNews);
+  console.log('articlesContent' ,articlesContent)
 
   return (
     <Layout>
       <h3 className={classes.Title}>{contentInterface.HOME_news_title}</h3>
       {articlesContent.map((article, index) => {
         const title = article.content.en.title;
-        const description = article.content.en.text;
-        const styleRows = index % 2 ? "row-reverse" : "row";
+        const description = article.content.en.text;       
+        const date = article.publishedOnHomePage;
         return index <= 1 ? (
           <Article
             image={article.images[0]}
             key={index}
             title={title}
             description={description}
-            style={styleRows}
+            date={date}
+           
           />
         ) : null;
       })}

@@ -1,3 +1,10 @@
+.WrapImag {
+    position: relative;
+    line-height: 0;
+}    
+
+
+
 .Image {
     width: 560px;
     height: 350px;
@@ -5,6 +12,7 @@
 }
 
 .Wrapper {
+    
     display: flex;
     gap: 20px;
     padding-bottom: 30px;
@@ -46,6 +54,25 @@
 
 .Link:hover {
     text-decoration: none;
+}
+
+.Date {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 0;
+    background:rgba(37, 44, 62, 0.6);
+    border-radius: 10px 0 10px 0;
+    width: 90px;
+    height: 27px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: bold;
+    color:#fff;
+
+
+
 }
 
 @media (max-width: 1279px) {
@@ -93,13 +120,24 @@
     .Wrapper {
         padding-bottom: 15px;
     }
+
+    .Date {
+        right: calc((100% - 90vw) / 2);
+        border-radius: 10px 0 0 0;
+    }
 }
 
 
 @media (max-width: 425px) {
-
+    
     .Image {
         width: 95vw;
+        
+    }
+
+    .Date {
+        right: calc((100% - 95vw) / 2);
 
     }
+
 }
