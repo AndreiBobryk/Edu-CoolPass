@@ -43,13 +43,20 @@ function BuyCard() {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1.05,
+          slidesToShow: 1.5,
           slidesToScroll: 1,
           initialSlide: 2,
         },
       },
       {
         breakpoint: 480,
+        settings: {
+          slidesToShow: 1.2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 400,
         settings: {
           slidesToShow: 1.05,
           slidesToScroll: 1,

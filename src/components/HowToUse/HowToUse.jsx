@@ -76,6 +76,19 @@ function HowToUse() {
       {
         breakpoint: 450,
         settings: {
+          slidesToShow: 1.15,
+          slidesToScroll: 1,
+          arrows: false, 
+          nextArrow: null,
+          prevArrow: null,
+          className: classes.CardStep,
+          dots: true,
+       
+        },
+      },
+      {
+        breakpoint: 390,
+        settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
           arrows: false, 

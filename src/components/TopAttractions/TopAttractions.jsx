@@ -55,6 +55,16 @@ function TopAttractions() {
       {
         breakpoint: 650,
         settings: {
+          slidesToShow: 1.3,
+          slidesToScroll: 1,
+          nextArrow: null,
+          prevArrow: null,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 400,
+        settings: {
           slidesToShow: 1.1,
           slidesToScroll: 1,
           nextArrow: null,
