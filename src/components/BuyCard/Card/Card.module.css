@@ -11,6 +11,11 @@
     padding-top: 19px;
 }
 
+.Title {
+    color: #FFFFFF;
+    padding-bottom: 4px;
+}
+
 .Subtitle {
     font-family: 'Open Sans';
     font-style: normal;
@@ -121,14 +126,7 @@
     display: none;
 }
 
-.ChildCalc__PriceSum {
-    /* display: inline-flex;
-    height: 48px;
-    width: 67px;
-    align-items: center;
-    vertical-align: top; */
 
-}
 
 
 .PriceTotal {
@@ -161,7 +159,8 @@
     .Wrapper {
         height: auto;
         width: 290px;
-        border-radius: 10px;
+        margin-left: 8px;
+
 
     
     }

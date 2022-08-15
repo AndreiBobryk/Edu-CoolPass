@@ -8,16 +8,15 @@ import { useSelector } from "react-redux";
 function MainSection() {
   const contentInterface = useSelector(state => state.translation.language)
   const contentMainSection = useSelector(state => state.translation.mainSection)
-  console.log('contentMainSection', contentMainSection)
   return (
     <section className={classes.HeroSection}>
       <CarouselMain />
       <div className={classes.HeroSection__Content}>
         <div>
         <h1 className={classes.Title}>{contentMainSection.title}</h1>
-        <h3 className={classes.Subtitle}>
+        <h2 className={classes.Subtitle}>
         {contentMainSection.subtitle}
-        </h3>
+        </h2>
         </div>
         <div className={classes.Search}>
           <span className={classes.WrapInput}>

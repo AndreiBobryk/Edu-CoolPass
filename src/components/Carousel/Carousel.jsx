@@ -24,8 +24,7 @@ function CarouselMain() {
 
 
 
-  return (
-    <Carousel showArrows={false}  autoPlay={true} dynamicHeight={false} emulateTouch={true} interval="12000" showThumbs={false} showStatus={false} stopOnHover={false} infiniteLoop={true}>
+  return (<Carousel showArrows={false}  autoPlay={true} dynamicHeight={true}  showThumbs={false} showStatus={false}  infiniteLoop={true} emulateTouch>
         {image.map(img => {
             const url = 'https://static2.praguecoolpass.com/' + img;
             return (

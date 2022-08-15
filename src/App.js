@@ -48,7 +48,6 @@ function App() {
     dispatch(getPriceBuyCard());
   }, []);
 
-  console.log("language", language);
 
   return (
     <div className="App">

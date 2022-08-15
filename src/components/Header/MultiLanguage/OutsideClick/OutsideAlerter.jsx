@@ -30,7 +30,6 @@ function useOutsideClick(ref, props) {
  * Component that alerts if you click outside of it
  */
 function OutsideClick(props) {
-    console.log('OutsideClick', props)
   const wrapperRef = useRef(null, props);
   useOutsideClick(wrapperRef);
 

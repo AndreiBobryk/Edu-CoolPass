@@ -12,13 +12,6 @@ function HowToUse() {
   const images = useSelector(state => state.translation.imagesHowToUse);
   const content = useSelector(state => state.translation.contentHowToUse);
 
-  useEffect(()=>{
-
-    setTimeout(()=> {
-      document.querySelector('#slider1').querySelector('.slick-track').style.transform = 'translate3d(0px, 0px, 0px)';
-    }, 950)
-    
-  }, [])
 
   const settings = {
     dots: false,
@@ -104,8 +97,7 @@ function HowToUse() {
       <h3 className={classes.Title}>
         {contentInterface.HOME_how_to_use_title}
       </h3>
-     <div id="slider1">
-      <Slider {...settings} >
+      { images.length && <Slider {...settings} >
         {images.map((image, index) => {
           return (
             <CardStep
@@ -116,8 +108,7 @@ function HowToUse() {
             />
           );
         })}
-      </Slider>
-      </div>
+      </Slider>}
     </Layout>
   );
 }

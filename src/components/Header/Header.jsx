@@ -6,14 +6,12 @@ import classesBur from "./BurgerIcon/BurgerIcon.module.css";
 import BurgerIcon from "./BurgerIcon/BurgerIcon";
 import "./Header.css";
 import MultiLanguage from "./MultiLanguage/MultiLanguage";
-import Alert from "../Alert/Alert";
 import Button from "../Button/Button";
-import { useDispatch, useSelector } from "react-redux";
-import { setCount } from "../../redux/reducer";
+import { useSelector } from "react-redux";
+
 
 
 function Header(props) {
-  const dispatch =useDispatch()
   const contentInterface = useSelector(state => state.translation.language)
   const [isOpenBurgerMenu, setIsOpenBurgerMenu] = useState(false)
   const [isHiddenHeaderClasses, setIsHiddenClasses] = useState("Header");
@@ -28,10 +26,12 @@ function Header(props) {
       const st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lastScrollTop) {
         setIsHiddenClasses("Header Hide");
-      } else {
+        lastScrollTop = st;
+      } else if ((lastScrollTop - st) > 20 ) {
         setIsHiddenClasses("Header");
+        lastScrollTop = st;
       }
-      lastScrollTop = st;
+   
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -55,11 +55,6 @@ function Header(props) {
   }
 
 
-  function handleClickButton() {
-    console.log('click')
-    Alert();
-    dispatch(setCount(1))
-  }
 
   return (
     <header className={isHiddenHeaderClasses}>
@@ -80,7 +75,6 @@ function Header(props) {
                 fontWeight: "700",
                 fontSize: "15px",
               }}
-              onClick={handleClickButton}
             />
           </div>
 

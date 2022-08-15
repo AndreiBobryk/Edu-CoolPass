@@ -44,7 +44,7 @@ function Card(props) {
   return (
     <div className={classes.Wrapper}>
       <div className={classes.Header}>
-        <h2>{props.title}</h2>
+        <h2 className={classes.Title}>{props.title}</h2>
         <p className={classes.Subtitle}>{BUY_PRAGUE_CARD_COOL_PASS}</p>
       </div>
       <div className={classes.Content}>

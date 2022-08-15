@@ -12,18 +12,8 @@ function Benefits() {
   const contentBenefitsSection = useSelector(state => state.translation.benefits)
   const endpoint =
     "https://api2.praguecoolpass.com/pages/5fd771cc072e5479bded0f2b";
-  const [benefits, setBenefits] = useState([]);
   const [isActive, setIsActive] = useState(false);
 
-  async function getBenefits() {
-    const data = await axios.get(endpoint);
-    console.log('Benefits_______', data.data.content)
-    setBenefits(data.data.content.en.benefits.items);
-  }
-
-  useEffect(() => {
-    getBenefits();
-  }, []);
 
   return (
     <Layout>

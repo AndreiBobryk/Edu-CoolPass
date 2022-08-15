@@ -55,3 +55,10 @@
     }
 
 }
+
+@media (max-width: 767px) {
+    .Burger {
+        margin-left: 9px;
+    }
+
+}

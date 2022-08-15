@@ -5,9 +5,7 @@ import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import classes from "./TopAttractions.module.css";
 import { SampleNextArrow, SamplePrevArrow } from "../Arrows/SampleArrow";
 import { ReactComponent as Heart } from "../../image/svg/heart.svg";
-import { ReactComponent as HeartFull } from "../../image/svg/heartFull.svg";
 import Layout from "../Layout/Layout";
-import Alert from "../Alert/Alert";
 import { useSelector } from "react-redux";
 
 function TopAttractions() {
@@ -81,8 +79,8 @@ function TopAttractions() {
             <div
               className={classes.Card}
               key={index}
-              style={{ width: "auto" }}
-              onClick={Alert}
+              style={{ width: "auto" }
+            }
             >
               <img
                 src={url}
@@ -104,10 +102,6 @@ function TopAttractions() {
                   onClick={(event) => {
                     event.stopPropagation();
                     setIsHeartFull(!isHeartFull);
-                    console.log(isHeartFull);
-                    console.log(event.target);
-
-                    //  isHeartFull ? event.target.querySelector('path').setAttribute('fill', 'white') : event.target.setAttribute('fill', 'none');
                   }}
                 >
                   <Heart />
