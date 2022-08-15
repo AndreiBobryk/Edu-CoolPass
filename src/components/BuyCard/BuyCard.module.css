@@ -2,21 +2,18 @@
     text-align: left;
     margin-top: 40px;
     margin-bottom: 30px;
-
 }
 
 .Ps {
     display: flex;
-
     row-gap: 0px;
     column-gap: 20px;
     flex-wrap: nowrap;
-
 }
 
 .Ps__Item {
-  width: 367px;
-  text-align: left;
+    width: 367px;
+    text-align: left;
 }
 
 .Ps__Item:last-child {
@@ -44,24 +41,21 @@
 .Ps__Item ul li::marker {
     color: red;
     font-size: 1.5em;
-  }
+}
 
-  @media (max-width: 1279px) {
+@media (max-width: 1279px) {
     .Ps {
         flex-wrap: wrap;
     }
-    
-  }
+}
 
-  @media (max-width: 767px) {
-   
-   .Title {
-    padding-left: 8px;
-   }
+@media (max-width: 767px) {
 
-   .Ps {
-    margin-left: 8px;
-   } 
-   
-    
-  }
+    .Title {
+        padding-left: 8px;
+    }
+
+    .Ps {
+        margin-left: 8px;
+    }
+}

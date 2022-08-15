@@ -27,8 +27,6 @@
     display: flex;
     align-items: center;
     text-transform: uppercase;
-
-
 }
 
 .TextBenefit {
@@ -85,6 +83,7 @@
         left: calc(50% - 111px);
         top: 0;
     }
+
     .Card {
         left: 50%;
         top: 100px;
@@ -105,31 +104,21 @@
 
     .Title {
         padding-left: 8px;
-
     }
 
-
     .Images__Static {
-
         min-height: 237px;
-
     }
 
 
     .Mobile {
         width: 125px;
-
-
     }
 
     .Card {
         width: 172px;
         left: 40%;
         top: 75px;
-
-
-
-
     }
 
 
@@ -138,14 +127,12 @@
         font-size: 16px;
         justify-content: center;
         text-align: center;
-
     }
 
     .TextBenefit {
         padding: 10px 8px;
         font-size: 12px;
         line-height: 170%;
-
     }
 
 

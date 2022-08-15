@@ -1,7 +1,5 @@
-
 .Img {
-    min-height: 550px;
-   
+    min-height: 550px; 
 }
 
 @media (max-width: 1279px) {
@@ -9,9 +7,3 @@
         min-height: calc(224px + (550 - 224) * ((100vw - 320px) / (1279 - 320)));
     }  
 }
-/* padding-left: calc(0px + (70) * ((100vw - 320px) / (1279 - 320))); */
-/* @media (max-width: 550px) {
-    .Img {
-        min-height: 244px;
-    }  
-} */

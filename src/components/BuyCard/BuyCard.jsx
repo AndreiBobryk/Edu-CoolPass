@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import classes from "./BuyCard.module.css";
 import Slider from "react-slick";
 import "../../../node_modules/slick-carousel/slick/slick.css";
 import "../../../node_modules/slick-carousel/slick/slick-theme.css";
 import Card from "./Card/Card";
-import axios from "axios";
 import Layout from "../Layout/Layout";
 import { useSelector } from "react-redux";
 

@@ -44,7 +44,7 @@
     margin-right: 15px;
 }
 
-.Button__See:hover, 
+.Button__See:hover,
 .Button__Write:hover {
     background: #fff;
     border: 1px solid #dbdbdb;
@@ -53,11 +53,13 @@
 @media (max-width: 1279px) {
     .Header {
         flex-direction: column;
- 
+
     }
+
     .Title {
         margin-bottom: 10px;
     }
+
     .Rating {
         margin-bottom: 31px;
     }
@@ -65,8 +67,8 @@
 
 @media (max-width: 767px) {
     .Title, .Rating {
-       padding-left: 8px;
-       padding-right: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
     }
 
     .Button__See {

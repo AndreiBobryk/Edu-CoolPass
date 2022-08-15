@@ -1,4 +1,3 @@
-
 import CarouselMain from "../Carousel/Carousel";
 import classes from "./MainSection.module.css";
 import {ReactComponent as IconSearch} from "../../image/svg/iconSearch.svg"

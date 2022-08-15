@@ -23,7 +23,6 @@
 .Title {
     position: absolute;
     bottom: 7%;
-    /* left: calc((50% - 100% / 2 )); */
     width: 85%;
     height: 20%;
     margin: 0 7%;
@@ -33,7 +32,6 @@
     font-style: normal;
    font-weight: 700;
    font-size: 18px;
-   /* line-height: 71px; */
    color: #FFFFFF;
    display: flex;
    align-items: center;
@@ -144,10 +142,7 @@
 
 @media (max-width: 450px) { 
 
-    /* .Wrapper {
-        width: 80vw;
-        height: auto;
-    } */
+
 
     .Image {
         width: 100vw;

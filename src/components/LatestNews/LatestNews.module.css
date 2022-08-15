@@ -1,12 +1,12 @@
 .Title {
     text-align: left;
     margin-top: 40px;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
 }
 
 
 .Wrap__button {
-float: right;
+    float: right;
 }
 
 .Button {
@@ -17,7 +17,8 @@ float: right;
 @media (max-width: 767px) {
     .Wrap__button {
         float: initial;
-        }
+    }
+
     .Button {
         width: 304px;
     }
@@ -25,6 +26,5 @@ float: right;
     .Title {
         padding-left: 8px;
     }
-    
-}
 
+}

@@ -1,5 +1,4 @@
-
-import React, {useEffect} from "react";
+import React from "react";
 import Layout from "../Layout/Layout";
 import CardStep from "./CardStep/CardStep";
 import classes from "./HowToUse.module.css";

@@ -77,7 +77,6 @@ function Header(props) {
               }}
             />
           </div>
-
           <MultiLanguage />
           </div>
         </div>

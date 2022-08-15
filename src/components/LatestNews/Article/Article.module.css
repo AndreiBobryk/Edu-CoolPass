@@ -12,7 +12,7 @@
 
 .Wrapper:nth-child(odd) {
     flex-direction: row-reverse;
- 
+
 }
 
 .Description {
@@ -26,7 +26,7 @@
 }
 
 .Description a {
-    color: rgba(37,44,62,.6);
+    color: rgba(37, 44, 62, .6);
     text-decoration: none;
 }
 
@@ -34,7 +34,8 @@
     cursor: pointer;
     margin-top: 25px;
     text-decoration: underline;
-    text-transform: capitalize;;
+    text-transform: capitalize;
+    ;
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -49,9 +50,9 @@
 
 @media (max-width: 1279px) {
     .Wrapper {
-       flex-direction: column;
+        flex-direction: column;
     }
-    
+
     .Wrapper:nth-child(odd) {
         flex-direction: column-reverse;
     }
@@ -60,7 +61,7 @@
 }
 
 
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
 
     .Wrapper:nth-child(odd) {
         flex-direction: column;
@@ -77,14 +78,16 @@
         padding-left: 8px;
         padding-right: 8px;
     }
+
     .Description {
         line-height: 165%;
     }
+
     .Link {
-       
+
         margin-top: 10px;
         padding-left: 8px;
-    
+
     }
 
     .Wrapper {
@@ -97,6 +100,6 @@
 
     .Image {
         width: 95vw;
-    
+
     }
 }

@@ -1,7 +1,7 @@
 import "./App.css";
 
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import Header from "./components/Header/Header";
 import MainSection from "./components/MainSection/MainSection";
 import TopAttractions from "./components/TopAttractions/TopAttractions";
@@ -32,7 +32,6 @@ function App() {
   useEffect(() => {
     document.title = "CoolPass | Prague CoolPass";
   });
-  const language = useSelector((state) => state.translation.language);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getTranslate());

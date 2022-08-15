@@ -1,16 +1,13 @@
-
-
 .Wrapper {
-    /* max-width: 1500px;  */
-    max-width: 1450px;
-    height: 43px;
-    margin: auto;
-    padding-left: 70px;
-    padding-right: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
+  max-width: 1450px;
+  height: 43px;
+  margin: auto;
+  padding-left: 70px;
+  padding-right: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
 }
 
 .Menu {
@@ -19,7 +16,7 @@
   justify-content: space-between;
   min-width: 90%;
   align-content: center;
-} 
+}
 
 .Buttons {
   display: flex;
@@ -31,23 +28,23 @@
     padding-left: 25px;
     padding-right: 25px;
   }
-  
 
-  
+
+
 }
 
 @media (max-width: 767px) {
   .Wrapper {
-  margin-top: 10px;
-  margin-bottom: auto;
-  height: 100%;
-  padding-left: 9px;
-  padding-right: 9px;
-}
+    margin-top: 10px;
+    margin-bottom: auto;
+    height: 100%;
+    padding-left: 9px;
+    padding-right: 9px;
+  }
 
-.Button__BuyOnline {
-  display: none;
-}
+  .Button__BuyOnline {
+    display: none;
+  }
 
 
 }

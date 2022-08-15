@@ -1,24 +1,24 @@
 .Header {
-    background: rgba(37, 44, 62, 0.6);
-    position: fixed;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-transition: all .4s ease-out;
-    transition: all .4s ease-out;
-    z-index: 1200;
-    top: 0;
-    min-width: 100%;
-    
+  background: rgba(37, 44, 62, 0.6);
+  position: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition: all .4s ease-out;
+  transition: all .4s ease-out;
+  z-index: 1200;
+  top: 0;
+  min-width: 100%;
+
+}
+
+.Hide {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+@media (max-width: 767px) {
+  .Header {
+    min-height: 56px;
   }
 
-  .Hide {
-    -webkit-transform: translate3d(0,-100%,0);
-    transform: translate3d(0,-100%,0);
-  }
-
-  @media (max-width: 767px) {
-    .Header {
-      min-height: 56px;
-    }
-  
-  }
+}

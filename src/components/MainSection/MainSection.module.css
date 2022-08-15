@@ -4,14 +4,14 @@
 
 .HeroSection__Content {
     position: absolute;
-    color:white;
+    color: white;
     box-sizing: border-box;
     max-width: 1280px;
     top: 278px;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;  
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -24,7 +24,7 @@
 }
 
 .Input {
-   
+
     width: 270px;
     height: 37px;
     border-radius: 5px;
@@ -93,7 +93,7 @@
 
 @media (max-width: 1279px) {
     .HeroSection__Content {
- 
+
         padding-left: 50px;
         top: 150px;
     }
@@ -102,19 +102,20 @@
         font-size: 32px;
 
     }
-    
+
 }
 
 @media (max-width: 767px) {
 
     .HeroSection__Content {
-  
+
         padding-left: 0px;
 
         top: 64px;
- 
-       
+
+
     }
+
     .Title {
         font-size: 26px;
         padding-left: 10px;
@@ -125,7 +126,7 @@
         padding-top: 0px;
         padding-left: 10px;
         margin-bottom: 89px;
-      
+
     }
 
     .Search {
@@ -135,7 +136,7 @@
     }
 
     .WrapInput {
-       display: block;
+        display: block;
     }
 
     .Input {
@@ -143,8 +144,8 @@
         display: block;
         border: black 1px solid;
         width: 300px;
-       
-       
+
+
         margin-left: 0px;
         margin-right: 0px;
         margin-bottom: 10px;
@@ -170,19 +171,19 @@
     .HeroSection {
         margin-bottom: 130px;
     }
-    
+
 }
 
 @media (max-width: 426px) {
     .Subtitle {
         margin-bottom: 120px;
     }
-    
+
 }
 
 @media (max-width: 376px) {
     .Subtitle {
         margin-bottom: 110px;
     }
-    
+
 }
