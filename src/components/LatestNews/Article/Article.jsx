@@ -16,7 +16,6 @@ function Article (props) {
    if (month < 10) month = '0' + month;
    
    const date = day + '.' + month + '.' + fullYear;
-   console.log(date)
 
 
 

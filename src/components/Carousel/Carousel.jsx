@@ -13,10 +13,10 @@ function CarouselMain() {
 
   async function getSlides() {
     const data = await axios.get(endpointsImage);
-    console.log('data', data.data.mainImage.author)
     setImage(data.data.mainImage.web_image);
     setAuthor(data.data.mainImage.author)
   }
+
 
   useEffect(() => {
     getSlides();

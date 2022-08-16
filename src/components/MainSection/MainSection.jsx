@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 function MainSection() {
   const contentInterface = useSelector(state => state.translation.language);
   const contentMainSection = useSelector(state => state.translation.mainSection);
-  console.log('contentMainSection', contentMainSection)
   return (
     <section className={classes.HeroSection}>
       <CarouselMain />

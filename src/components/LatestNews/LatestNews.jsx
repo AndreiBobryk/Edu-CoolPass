@@ -9,7 +9,6 @@ import Alert from "../Alert/Alert";
 function LatestNews() {
   const contentInterface = useSelector(state => state.translation.language);
   const articlesContent = useSelector(state => state.translation.latestNews);
-  console.log('articlesContent' ,articlesContent)
 
   return (
     <Layout>
